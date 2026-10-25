@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta:start -->
+<meta name="description" content="Start free. Upgrade when your team is ready. Compare Starter, Growth and Enterprise plans.">
+<meta name="theme-color" content="#0B0B15">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roster">
+<meta property="og:title" content="Pricing — Roster">
+<meta property="og:description" content="Start free. Upgrade when your team is ready. Compare Starter, Growth and Enterprise plans.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pricing — Roster">
+<meta name="twitter:description" content="Start free. Upgrade when your team is ready. Compare Starter, Growth and Enterprise plans.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<!-- meta:end -->
+<title>Pricing — Roster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Open+Sans:wght@600&family=Sora:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pricing.css">
+</head>
+<body>
+
+<!-- ===== Header (Figma: navbar 2062:9150) ===== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a class="logo" href="index.html" aria-label="Roster home"><img src="assets/logo.svg" alt="Roster" width="140" height="36"><img class="logo__hover" src="assets/logo-hover.svg" alt="" aria-hidden="true" width="140" height="36"></a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__item" href="product.html"><span>Product</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav__dd" id="solDd">
+        <button class="nav__item nav__item--caret" type="button" aria-expanded="false" aria-controls="solMenu" aria-haspopup="true"><span>Solutions</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="caret" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav__menu" id="solMenu" role="menu" aria-label="Solutions">
+          <a class="nav__menu-item" href="solutions-founders.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M17.6 9.6l-2.27-.65a5.2 5.2 0 0 1-3.6-3.6L11.08 3.1a.44.44 0 0 0-.84 0l-.65 2.25a5.2 5.2 0 0 1-3.6 3.6l-2.27.65a.44.44 0 0 0 0 .84l2.27.65a5.2 5.2 0 0 1 3.6 3.6l.65 2.27a.44.44 0 0 0 .84 0l.65-2.27a5.2 5.2 0 0 1 3.6-3.6l2.27-.65a.44.44 0 0 0 0-.84z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" transform="translate(-.66 0)"/></svg></span><span class="nav__menu-txt"><b>For Startup Founders</b><small>Hire fast without the overhead</small></span></a>
+          <a class="nav__menu-item" href="solutions-hr.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.375 1.9375H11.875C11.9489 1.93744 12.0225 1.95224 12.0908 1.98047C12.1589 2.00869 12.2213 2.04947 12.2734 2.10156L16.6484 6.47656C16.7005 6.52872 16.7413 6.59109 16.7695 6.65918C16.7978 6.72746 16.8126 6.80111 16.8125 6.875V16.875C16.8125 17.1899 16.6875 17.4921 16.4648 17.7148C16.2421 17.9375 15.9399 18.0625 15.625 18.0625H4.375C4.06006 18.0625 3.75786 17.9375 3.53516 17.7148C3.31246 17.4921 3.1875 17.1899 3.1875 16.875V3.125L3.19336 3.00781C3.22032 2.7359 3.34025 2.48006 3.53516 2.28516C3.75786 2.06246 4.06006 1.9375 4.375 1.9375ZM4.3125 16.9375H15.6875V7.4375H11.875C11.7258 7.4375 11.583 7.37795 11.4775 7.27246C11.372 7.16697 11.3125 7.02418 11.3125 6.875V3.0625H4.3125V16.9375ZM7.5 12.5625H12.5C12.6492 12.5625 12.792 12.622 12.8975 12.7275C13.003 12.833 13.0625 12.9758 13.0625 13.125C13.0625 13.2742 13.003 13.417 12.8975 13.5225C12.792 13.628 12.6492 13.6875 12.5 13.6875H7.5C7.35082 13.6875 7.20803 13.628 7.10254 13.5225C6.99705 13.417 6.9375 13.2742 6.9375 13.125C6.9375 12.9758 6.99705 12.833 7.10254 12.7275C7.20803 12.622 7.35082 12.5625 7.5 12.5625ZM7.5 10.0625H12.5C12.6492 10.0625 12.792 10.122 12.8975 10.2275C13.003 10.333 13.0625 10.4758 13.0625 10.625C13.0625 10.7742 13.003 10.917 12.8975 11.0225C12.792 11.128 12.6492 11.1875 12.5 11.1875H7.5C7.35082 11.1875 7.20803 11.128 7.10254 11.0225C6.99705 10.917 6.9375 10.7742 6.9375 10.625C6.9375 10.4758 6.99705 10.333 7.10254 10.2275C7.20803 10.122 7.35082 10.0625 7.5 10.0625ZM12.4375 6.3125H14.8926L14.7852 6.20605L12.5439 3.96484L12.4375 3.85742V6.3125Z" fill="currentColor"/></svg></span><span class="nav__menu-txt"><b>For HR &amp; People Ops</b><small>Structure every role. See every pipeline.</small></span></a>
+          <a class="nav__menu-item" href="solutions-managers.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M19.3211 9.74688C19.2937 9.68516 18.632 8.21719 17.1609 6.74609C15.2008 4.78594 12.725 3.75 9.99999 3.75C7.27499 3.75 4.79921 4.78594 2.83905 6.74609C1.36796 8.21719 0.703118 9.6875 0.678899 9.74688C0.643362 9.82681 0.625 9.91331 0.625 10.0008C0.625 10.0883 0.643362 10.1748 0.678899 10.2547C0.706243 10.3164 1.36796 11.7836 2.83905 13.2547C4.79921 15.2141 7.27499 16.25 9.99999 16.25C12.725 16.25 15.2008 15.2141 17.1609 13.2547C18.632 11.7836 19.2937 10.3164 19.3211 10.2547C19.3566 10.1748 19.375 10.0883 19.375 10.0008C19.375 9.91331 19.3566 9.82681 19.3211 9.74688ZM9.99999 15C7.5953 15 5.49452 14.1258 3.75546 12.4023C3.0419 11.6927 2.43483 10.8836 1.95312 10C2.4347 9.11636 3.04179 8.30717 3.75546 7.59766C5.49452 5.87422 7.5953 5 9.99999 5C12.4047 5 14.5055 5.87422 16.2445 7.59766C16.9595 8.307 17.5679 9.11619 18.0508 10C17.4875 11.0516 15.0336 15 9.99999 15ZM9.99999 6.25C9.25831 6.25 8.53329 6.46993 7.9166 6.88199C7.29992 7.29404 6.81927 7.87971 6.53544 8.56494C6.25162 9.25016 6.17735 10.0042 6.32205 10.7316C6.46674 11.459 6.82389 12.1272 7.34834 12.6517C7.87279 13.1761 8.54097 13.5333 9.2684 13.6779C9.99583 13.8226 10.7498 13.7484 11.4351 13.4645C12.1203 13.1807 12.7059 12.7001 13.118 12.0834C13.5301 11.4667 13.75 10.7417 13.75 10C13.749 9.00576 13.3535 8.05253 12.6505 7.34949C11.9475 6.64645 10.9942 6.25103 9.99999 6.25ZM9.99999 12.5C9.50554 12.5 9.02219 12.3534 8.61107 12.0787C8.19994 11.804 7.87951 11.4135 7.69029 10.9567C7.50107 10.4999 7.45157 9.99723 7.54803 9.51227C7.64449 9.02732 7.88259 8.58186 8.23222 8.23223C8.58186 7.8826 9.02731 7.6445 9.51227 7.54804C9.99722 7.45157 10.4999 7.50108 10.9567 7.6903C11.4135 7.87952 11.804 8.19995 12.0787 8.61107C12.3534 9.0222 12.5 9.50555 12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 9.99999 12.5Z" fill="currentColor"/></svg></span><span class="nav__menu-txt"><b>For Hiring Managers</b><small>Review candidates. Not email threads.</small></span></a>
+        </div>
+      </div>
+      <a class="nav__item" href="#"><span>Integrations</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="nav__item is-current" href="pricing.html" aria-current="page"><span>Pricing</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a class="navbar__login" href="auth.html?mode=login"><span>Log in</span></a>
+      <a class="btn btn--secondary btn--sm" href="auth.html">Start Free Trial
+        <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="top top--pricing">
+  <!-- ===== Pricing (Figma 2078:3708) ===== -->
+  <section class="pricing pricing--page" id="pricing" data-observe>
+    <div class="pricing__head">
+      <div class="sec-head">
+        <h1 class="sec-head__title">Simple pricing. Hire your whole team.</h1>
+        <p class="sec-head__sub">Start free. Upgrade when your team is ready. Cancel anytime.</p>
+      </div>
+      <div class="toggle" role="tablist" aria-label="Billing period">
+        <span class="toggle__pill" aria-hidden="true"></span>
+        <button class="is-on" type="button" role="tab" aria-selected="true" data-period="monthly">Monthly</button>
+        <button type="button" role="tab" aria-selected="false" data-period="annual">Annually <span class="toggle__save">−20%</span></button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan plan--side plan--l" style="--d:.1s">
+        <div class="glow" style="left:-29px;top:517px;width:437px;height:101px"></div>
+        <div class="plan__head">
+          <p class="plan__name">Starter</p>
+          <p class="plan__price"><b data-monthly="$0" data-annual="$0">$0</b><span>/month</span></p>
+          <p class="plan__desc">For founders and small teams getting their first hires done. No credit card needed.</p>
+        </div>
+        <div class="plan__line"></div>
+        <div class="plan__list"><p style="--k:0"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Up to 3 active jobs</p><p style="--k:1"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Basic pipeline (kanban)</p><p style="--k:2"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Team collaboration</p><p style="--k:3"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Email &amp; calendar sync</p><p class="is-off" style="--k:4"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#9D9DA1" stroke-width="2"/><path d="M15 9L9 15" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/><path d="M15 15L9 9" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/></svg><span>AI candidate summaries<span class="sr-only"> (not included)</span></span></p><p class="is-off" style="--k:5"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#9D9DA1" stroke-width="2"/><path d="M15 9L9 15" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/><path d="M15 15L9 9" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/></svg><span>Advanced analytics<span class="sr-only"> (not included)</span></span></p><p class="is-off" style="--k:6"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#9D9DA1" stroke-width="2"/><path d="M15 9L9 15" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/><path d="M15 15L9 9" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/></svg><span>Priority support<span class="sr-only"> (not included)</span></span></p></div>
+        <a class="btn btn--secondary btn--md" href="auth.html">Start for free
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+      <article class="plan plan--main" style="--d:0s">
+        <div class="glow" style="left:-70px;top:322px;width:543px;height:427px"></div>
+        <div class="plan__head">
+          <p class="plan__name">Growth</p>
+          <p class="plan__price"><b data-monthly="$49" data-annual="$39">$49</b><span>/month</span></p>
+          <p class="plan__billed" aria-live="polite">billed annually · $468/year</p>
+          <p class="plan__desc">For HR teams and growing companies managing multiple roles at once.</p>
+        </div>
+        <div class="plan__line"></div>
+        <div class="plan__list"><p style="--k:0"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Unlimited active jobs</p><p style="--k:1"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Full pipeline + automation</p><p style="--k:2"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Structured scorecards</p><p style="--k:3"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Slack + LinkedIn integrations</p><p style="--k:4"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">AI candidate summaries &amp; ranking</p><p style="--k:5"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Hiring analytics dashboard</p><p class="is-off" style="--k:6"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#9D9DA1" stroke-width="2"/><path d="M15 9L9 15" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/><path d="M15 15L9 9" stroke="#9D9DA1" stroke-width="2" stroke-linecap="round"/></svg><span>Custom workflows<span class="sr-only"> (not included)</span></span></p></div>
+        <a class="btn btn--primary btn--md" href="auth.html">Start free trial
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+      <article class="plan plan--side plan--r" style="--d:.2s">
+        <div class="glow" style="left:-28px;top:501px;width:437px;height:117px"></div>
+        <div class="plan__head">
+          <p class="plan__name">Enterprise</p>
+          <p class="plan__price"><b>Custom</b></p>
+          <p class="plan__desc">For scaling teams that need custom workflows, compliance, and dedicated support.</p>
+        </div>
+        <div class="plan__line"></div>
+        <div class="plan__list"><p style="--k:0"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Everything in Growth</p><p style="--k:1"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Custom hiring workflows</p><p style="--k:2"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">SSO &amp; advanced permissions</p><p style="--k:3"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">GDPR + SOC 2 compliance</p><p style="--k:4"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Dedicated account manager</p><p style="--k:5"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Priority support &amp; SLA</p><p style="--k:6"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true">Custom integrations via API</p></div>
+        <a class="btn btn--secondary btn--md" href="demo.html">Talk to sales
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== Compare plans: what each plan includes ===== -->
+  <section class="compare" id="compare" data-observe>
+    <div class="sec-head compare__head">
+      <h2 class="sec-head__title">Compare plans</h2>
+      <p class="sec-head__sub">Everything in each plan, side by side.</p>
+    </div>
+    <div class="ct__wrap">
+      <table class="ct">
+        <caption class="sr-only">Roster plans compared feature by feature</caption>
+        <thead><tr><th scope="col" class="ct__corner"><span>Features</span></th><th scope="col" class=""><div class="ct__plan"><b>Starter</b><span>$0 /month</span><a class="btn btn--secondary btn--sm" href="auth.html">Start for free<svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></th><th scope="col" class="ct__hl"><div class="ct__plan"><b>Growth</b><span><em data-monthly="$49" data-annual="$39">$49</em> /month</span><a class="btn btn--primary btn--sm" href="auth.html">Start free trial<svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></th><th scope="col" class=""><div class="ct__plan"><b>Enterprise</b><span>Custom</span><a class="btn btn--secondary btn--sm" href="demo.html">Talk to sales<svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></th></tr></thead>
+        <tbody>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">Jobs &amp; pipeline</th></tr>
+        <tr class="ct__row" style="--k:0"><th scope="row">Active jobs</th><td><span class="ct__t">Up to 3</span></td><td class="ct__hl"><span class="ct__t">Unlimited</span></td><td><span class="ct__t">Unlimited</span></td></tr>
+        <tr class="ct__row" style="--k:1"><th scope="row">Kanban pipeline</th><td><span class="ct__t">Basic</span></td><td class="ct__hl"><span class="ct__t">Full + automation</span></td><td><span class="ct__t">Full + automation</span></td></tr>
+        <tr class="ct__row" style="--k:2"><th scope="row">Custom hiring workflows</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">Team &amp; collaboration</th></tr>
+        <tr class="ct__row" style="--k:3"><th scope="row">Team collaboration</th><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:4"><th scope="row">Structured scorecards</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">AI</th></tr>
+        <tr class="ct__row" style="--k:5"><th scope="row">AI candidate summaries &amp; ranking</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">Integrations</th></tr>
+        <tr class="ct__row" style="--k:6"><th scope="row">Email &amp; calendar sync</th><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:7"><th scope="row">Slack + LinkedIn integrations</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:8"><th scope="row">Custom integrations via API</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">Analytics</th></tr>
+        <tr class="ct__row" style="--k:9"><th scope="row">Hiring analytics dashboard</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__group"><th colspan="4" scope="colgroup">Security &amp; support</th></tr>
+        <tr class="ct__row" style="--k:10"><th scope="row">SSO &amp; advanced permissions</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:11"><th scope="row">GDPR + SOC 2 compliance</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:12"><th scope="row">Priority support &amp; SLA</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        <tr class="ct__row" style="--k:13"><th scope="row">Dedicated account manager</th><td><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td class="ct__hl"><span class="ct__n" aria-label="Not included"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M15 9L9 15M15 15L9 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></td><td><span class="ct__y" aria-label="Included"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare__note">Not sure which plan fits? <a href="demo.html">Book a 30-min demo</a> and we'll map it to your hiring process.</p>
+  </section>
+  <!-- ===== CTA (Figma 2078:3909) ===== -->
+  <section class="cta" data-observe>
+    <div class="cta__box">
+      <img class="cta__bg" src="assets/statement-bg.jpg" alt="" aria-hidden="true">
+      <span class="cta__el" style="left:225px;top:523px" aria-hidden="true"></span>
+      <span class="cta__el" style="left:50%;top:263px;transform:translateX(-50%)" aria-hidden="true"></span>
+      <div class="cta__text">
+        <div class="cta__copy">
+          <p class="cta__kicker" style="--d:0s">Ready to move faster?</p>
+          <h2 class="cta__title" style="--d:.08s">Start hiring <em>better today</em>.</h2>
+          <p class="cta__desc" style="--d:.16s">Join teams that moved from chaos to clarity — and hired faster because of it. No setup fees. No long contracts.</p>
+        </div>
+        <div class="cta__actions" style="--d:.26s">
+          <div class="cta__btns">
+          <a class="btn btn--primary btn--md" href="auth.html">Start Free Trial
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--secondary btn--md" href="demo.html">Request a Demo
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          </div>
+          <p class="cta__note">No credit card required · 30 min · See the full product</p>
+        </div>
+      </div>
+      <figure class="cta__quote" style="margin:0">
+        <blockquote>"Finally, an ATS our hiring managers actually use. We hired our last 3 engineers in under 2 weeks."</blockquote>
+        <figcaption class="cta__who"><span><img src="assets/avatar-marcus.jpg" alt="" width="32" height="32" onerror="this.style.visibility='hidden'"></span>Marcus T. · Engineering Lead, SaaS Scaleup</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-observe>
+  <div class="footer__glow" aria-hidden="true"></div>
+  <hr>
+  <div class="footer__top">
+    <div class="footer__row">
+      <h2 class="footer__h">Have questions? We're here.</h2>
+      <div class="footer__right"><p class="footer__sub">Talk to our team, explore the product, or just say hello.</p></div>
+    </div>
+    <div class="contacts"><a class="contact" href="#"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Book a demo call</small><b class="">calendly.com/roster</b></span></a><a class="contact" href="mailto:hello@roster.app"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Send us an email</small><b class="">hello@roster.app</b></span></a><a class="contact" href="#"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Read our docs</small><b class="u">docs.roster.app</b></span></a></div>
+  </div>
+  <hr>
+  <div class="footer__nav">
+    <nav class="fcols" aria-label="Footer"><div class="fcol"><h3>Product</h3><a href="#">Pipeline</a><a href="#">Candidate Profiles</a><a href="#">Collaboration</a><a href="#">AI Features</a><a href="#">Analytics</a><a href="#">Integrations</a></div><div class="fcol"><h3>Solutions</h3><a href="solutions-founders.html">For Startups</a><a href="solutions-managers.html">For Hiring Managers</a><a href="solutions-hr.html">For HR Teams</a><a href="pricing.html">Pricing</a></div><div class="fcol"><h3>Resources</h3><a href="#">Blog</a><a href="#">Hiring Guides</a><a href="#">Templates</a><a href="#">Changelog</a><a href="#">API Docs</a></div><div class="fcol"><h3>Company</h3><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></nav>
+    <div class="footer__right"><div class="socials"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.9962 2H8.00375C4.70169 2 2 4.70169 2 8.00375V15.9962C2 19.2983 4.70169 22 8.00375 22H15.9962C19.2983 22 22 19.2983 22 15.9962V8.00375C22 4.70169 19.3358 2 15.9962 2ZM17.2345 12.0188C17.2345 14.8705 14.9456 17.1595 12.0938 17.1595C9.24203 17.1595 6.9531 14.8705 6.9531 12.0188C6.9531 9.16698 9.24203 6.87805 12.0938 6.87805C14.9081 6.87805 17.2345 9.16698 17.2345 12.0188ZM17.2345 8.0788C16.5591 8.0788 16.0338 7.55347 16.0338 6.87805C16.0338 6.20263 16.5591 5.6773 17.2345 5.6773C17.9099 5.6773 18.4353 6.20263 18.4353 6.87805C18.4353 7.51595 17.8724 8.0788 17.2345 8.0788Z"/><path d="M12 9C10.3571 9 9 10.3214 9 12C9 13.6786 10.3214 15 12 15C13.6429 15 15 13.6786 15 12C14.9643 10.3214 13.6429 9 12 9Z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.28291 22H2.35363V8.04563H6.28291V22ZM4.31827 6.44867C3.0609 6.44867 2 5.46008 2 4.24335C2 3.02662 3.02161 2 4.27898 2C5.53635 2 6.59725 2.98859 6.59725 4.20532C6.59725 5.42205 5.57564 6.44867 4.31827 6.44867ZM22 22H18.0707V14.8897C18.0707 10.6312 12.8448 10.9354 12.8448 14.8897V22H8.91552V8.04563H12.8448V10.289C14.6916 7.01901 22 6.75285 22 13.4449V22Z"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.3815 2H21.7537L14.3496 10.4871L23 22H16.2116L10.8967 15.0037L4.81206 22H1.43985L9.28391 12.9225L1 2H7.95701L12.7587 8.39114L18.3815 2ZM17.2013 20.0074H19.0706L6.97467 3.91882H4.96601L17.2013 20.0074Z"/></svg></a><a href="mailto:hello@roster.app" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM12 13L20 8V6L12 11L4 6V8L12 13Z"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.49084 8.66667H7V12H9.49084V22H13.6667V12H16.707L17 8.66667H13.6667V7.27472C13.6667 6.46886 13.8132 6.17582 14.5824 6.17582H17V2H13.8132C10.8095 2 9.49084 3.31868 9.49084 5.84615V8.66667Z"/></svg></a></div></div>
+  </div>
+  <hr>
+  <div class="footer__row news">
+    <div><h3>Hiring insights, delivered monthly.</h3><p>Tips, product updates, and hiring benchmarks for fast-growing teams.</p></div>
+    <div class="footer__right">
+      <form class="news__form" novalidate>
+        <input type="email" name="email" placeholder="Enter your work email" aria-label="Work email" required>
+        <button class="btn btn--primary btn--md" type="submit">Subscribe
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+      </form>
+      <p class="news__msg" aria-live="polite"></p>
+    </div>
+  </div>
+  <hr>
+  <div class="sign">
+    <p>© 2026 Roster, Inc. All rights reserved.</p>
+    <nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookie Settings</a></nav>
+  </div>
+  <div class="footer__brand" aria-hidden="true">
+    <img class="footer__logo" src="assets/logo.svg" alt="">
+    <img class="footer__arrow" src="assets/arrow-navy.svg" alt="">
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="pricing.js"></script>
+</body>
+</html>

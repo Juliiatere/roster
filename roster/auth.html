@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta:start -->
+<meta name="description" content="Create your Roster workspace in minutes. No credit card needed.">
+<meta name="theme-color" content="#0B0B15">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roster">
+<meta property="og:title" content="Sign up — Roster">
+<meta property="og:description" content="Create your Roster workspace in minutes. No credit card needed.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sign up — Roster">
+<meta name="twitter:description" content="Create your Roster workspace in minutes. No credit card needed.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<!-- meta:end -->
+<title>Sign up — Roster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth" data-mode="signup">
+
+<main class="auth__split">
+  <!-- ===== Left: form (demo only — nothing is submitted) ===== -->
+  <section class="auth__form-side">
+    <a class="logo auth__logo" href="index.html" aria-label="Roster home"><img src="assets/logo.svg" alt="Roster" width="140" height="36"><img class="logo__hover" src="assets/logo-hover.svg" alt="" aria-hidden="true" width="140" height="36"></a>
+
+    <div class="auth__card">
+      <span class="auth__mark" aria-hidden="true"><img src="assets/mark.svg" alt=""></span>
+      <div class="auth__swap" id="authSwap">
+        <h1 class="auth__title" data-signup="Start hiring with Roster" data-login="Welcome back">Start hiring with Roster</h1>
+        <p class="auth__sub" data-signup="Create your workspace in minutes. No credit card needed." data-login="Log in to your Roster workspace.">Create your workspace in minutes. No credit card needed.</p>
+      </div>
+
+      <div class="auth__oauth">
+        <button class="auth__social" type="button"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84a4.14 4.14 0 0 1-1.8 2.72v2.26h2.92c1.7-1.57 2.68-3.88 2.68-6.62z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.8.54-1.84.86-3.04.86-2.34 0-4.32-1.58-5.03-3.7H.96v2.33A9 9 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.97 10.72A5.41 5.41 0 0 1 3.68 9c0-.6.1-1.18.29-1.72V4.95H.96A9 9 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.5.45 3.44 1.35l2.58-2.58A9 9 0 0 0 .96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg><span>Continue with Google</span></button>
+        <button class="auth__social" type="button"><svg viewBox="0 0 18 18" aria-hidden="true"><path fill="#F25022" d="M0 0h8.5v8.5H0z"/><path fill="#7FBA00" d="M9.5 0H18v8.5H9.5z"/><path fill="#00A4EF" d="M0 9.5h8.5V18H0z"/><path fill="#FFB900" d="M9.5 9.5H18V18H9.5z"/></svg><span>Continue with Microsoft</span></button>
+      </div>
+
+      <div class="auth__or"><span>or</span></div>
+
+      <form class="auth__email" id="authForm" novalidate>
+        <label class="auth__field">
+          <span>Work email</span>
+          <input type="email" name="email" placeholder="name@company.com" autocomplete="email">
+        </label>
+        <label class="auth__field auth__field--pass">
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Your password" autocomplete="current-password">
+        </label>
+        <button class="btn btn--primary btn--md auth__submit" type="submit"><span data-signup="Continue with email" data-login="Log in">Continue with email</span>
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+
+      <p class="auth__switch">
+        <span data-signup="Already have an account?" data-login="New to Roster?">Already have an account?</span>
+        <a href="auth.html?mode=login" id="authToggle" data-signup="Log in" data-login="Create an account">Log in</a>
+      </p>
+      <p class="auth__legal">By continuing, you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- ===== Right: testimonial in the landing style ===== -->
+  <aside class="auth__quote-side" aria-label="Customer story">
+    <img class="auth__bg" src="assets/product-bg.jpg" alt="" aria-hidden="true">
+    <div class="glow-y auth__glow" aria-hidden="true"></div>
+    <figure class="auth__quote">
+      <span class="auth__qmark auth__qmark--open" aria-hidden="true">“</span>
+      <blockquote data-signup='We cut our hiring cycle in half. &lt;mark&gt;Roster made our team actually talk to each other about candidates.&lt;/mark&gt;'
+                  data-login='Finally, an ATS our hiring managers actually use. &lt;mark&gt;We hired our last 3 engineers in under 2 weeks.&lt;/mark&gt;'>We cut our hiring cycle in half. <mark>Roster made our team actually talk to each other about candidates.</mark></blockquote>
+      <figcaption class="author">
+        <span class="author__img"><img src="assets/avatar-sarah.jpg" alt="" width="64" height="64" data-signup="assets/avatar-sarah.jpg" data-login="assets/avatar-marcus.jpg"></span>
+        <span class="author__text">
+          <span class="author__name" data-signup="Sarah K." data-login="Marcus T.">Sarah K.</span>
+          <span class="author__role" data-signup="Head of Talent, Series A Startup · 60 employees" data-login="Engineering Lead, SaaS Scaleup">Head of Talent, Series A Startup · 60 employees</span>
+        </span>
+      </figcaption>
+      <span class="auth__qmark auth__qmark--close" aria-hidden="true">”</span>
+    </figure>
+    <img class="auth__float" src="assets/float-role.png" alt="" aria-hidden="true" width="313" height="159">
+  </aside>
+</main>
+
+<script src="auth.js"></script>
+</body>
+</html>

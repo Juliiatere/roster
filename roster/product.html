@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- meta:start -->
+<meta name="description" content="One workspace for every hiring decision: pipeline, candidate profiles, team feedback, AI screening and analytics.">
+<meta name="theme-color" content="#0B0B15">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roster">
+<meta property="og:title" content="Product — Roster">
+<meta property="og:description" content="One workspace for every hiring decision: pipeline, candidate profiles, team feedback, AI screening and analytics.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Product — Roster">
+<meta name="twitter:description" content="One workspace for every hiring decision: pipeline, candidate profiles, team feedback, AI screening and analytics.">
+<meta name="twitter:image" content="assets/og-image.jpg">
+<!-- meta:end -->
+<title>Product — Roster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Open+Sans:wght@600&family=Sora:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="product.css">
+</head>
+<body>
+
+<!-- ===== Header (Figma: navbar 2062:9150) ===== -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a class="logo" href="index.html" aria-label="Roster home"><img src="assets/logo.svg" alt="Roster" width="140" height="36"><img class="logo__hover" src="assets/logo-hover.svg" alt="" aria-hidden="true" width="140" height="36"></a>
+
+    <nav class="nav" aria-label="Main">
+      <a class="nav__item is-current" href="product.html" aria-current="page"><span>Product</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="nav__dd" id="solDd">
+        <button class="nav__item nav__item--caret" type="button" aria-expanded="false" aria-controls="solMenu" aria-haspopup="true"><span>Solutions</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="caret" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M9.75 4.5L6 8.25L2.25 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="nav__menu" id="solMenu" role="menu" aria-label="Solutions">
+          <a class="nav__menu-item" href="solutions-founders.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M17.6 9.6l-2.27-.65a5.2 5.2 0 0 1-3.6-3.6L11.08 3.1a.44.44 0 0 0-.84 0l-.65 2.25a5.2 5.2 0 0 1-3.6 3.6l-2.27.65a.44.44 0 0 0 0 .84l2.27.65a5.2 5.2 0 0 1 3.6 3.6l.65 2.27a.44.44 0 0 0 .84 0l.65-2.27a5.2 5.2 0 0 1 3.6-3.6l2.27-.65a.44.44 0 0 0 0-.84z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" transform="translate(-.66 0)"/></svg></span><span class="nav__menu-txt"><b>For Startup Founders</b><small>Hire fast without the overhead</small></span></a>
+          <a class="nav__menu-item" href="solutions-hr.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.375 1.9375H11.875C11.9489 1.93744 12.0225 1.95224 12.0908 1.98047C12.1589 2.00869 12.2213 2.04947 12.2734 2.10156L16.6484 6.47656C16.7005 6.52872 16.7413 6.59109 16.7695 6.65918C16.7978 6.72746 16.8126 6.80111 16.8125 6.875V16.875C16.8125 17.1899 16.6875 17.4921 16.4648 17.7148C16.2421 17.9375 15.9399 18.0625 15.625 18.0625H4.375C4.06006 18.0625 3.75786 17.9375 3.53516 17.7148C3.31246 17.4921 3.1875 17.1899 3.1875 16.875V3.125L3.19336 3.00781C3.22032 2.7359 3.34025 2.48006 3.53516 2.28516C3.75786 2.06246 4.06006 1.9375 4.375 1.9375ZM4.3125 16.9375H15.6875V7.4375H11.875C11.7258 7.4375 11.583 7.37795 11.4775 7.27246C11.372 7.16697 11.3125 7.02418 11.3125 6.875V3.0625H4.3125V16.9375ZM7.5 12.5625H12.5C12.6492 12.5625 12.792 12.622 12.8975 12.7275C13.003 12.833 13.0625 12.9758 13.0625 13.125C13.0625 13.2742 13.003 13.417 12.8975 13.5225C12.792 13.628 12.6492 13.6875 12.5 13.6875H7.5C7.35082 13.6875 7.20803 13.628 7.10254 13.5225C6.99705 13.417 6.9375 13.2742 6.9375 13.125C6.9375 12.9758 6.99705 12.833 7.10254 12.7275C7.20803 12.622 7.35082 12.5625 7.5 12.5625ZM7.5 10.0625H12.5C12.6492 10.0625 12.792 10.122 12.8975 10.2275C13.003 10.333 13.0625 10.4758 13.0625 10.625C13.0625 10.7742 13.003 10.917 12.8975 11.0225C12.792 11.128 12.6492 11.1875 12.5 11.1875H7.5C7.35082 11.1875 7.20803 11.128 7.10254 11.0225C6.99705 10.917 6.9375 10.7742 6.9375 10.625C6.9375 10.4758 6.99705 10.333 7.10254 10.2275C7.20803 10.122 7.35082 10.0625 7.5 10.0625ZM12.4375 6.3125H14.8926L14.7852 6.20605L12.5439 3.96484L12.4375 3.85742V6.3125Z" fill="currentColor"/></svg></span><span class="nav__menu-txt"><b>For HR &amp; People Ops</b><small>Structure every role. See every pipeline.</small></span></a>
+          <a class="nav__menu-item" href="solutions-managers.html" role="menuitem"><span class="nav__menu-ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M19.3211 9.74688C19.2937 9.68516 18.632 8.21719 17.1609 6.74609C15.2008 4.78594 12.725 3.75 9.99999 3.75C7.27499 3.75 4.79921 4.78594 2.83905 6.74609C1.36796 8.21719 0.703118 9.6875 0.678899 9.74688C0.643362 9.82681 0.625 9.91331 0.625 10.0008C0.625 10.0883 0.643362 10.1748 0.678899 10.2547C0.706243 10.3164 1.36796 11.7836 2.83905 13.2547C4.79921 15.2141 7.27499 16.25 9.99999 16.25C12.725 16.25 15.2008 15.2141 17.1609 13.2547C18.632 11.7836 19.2937 10.3164 19.3211 10.2547C19.3566 10.1748 19.375 10.0883 19.375 10.0008C19.375 9.91331 19.3566 9.82681 19.3211 9.74688ZM9.99999 15C7.5953 15 5.49452 14.1258 3.75546 12.4023C3.0419 11.6927 2.43483 10.8836 1.95312 10C2.4347 9.11636 3.04179 8.30717 3.75546 7.59766C5.49452 5.87422 7.5953 5 9.99999 5C12.4047 5 14.5055 5.87422 16.2445 7.59766C16.9595 8.307 17.5679 9.11619 18.0508 10C17.4875 11.0516 15.0336 15 9.99999 15ZM9.99999 6.25C9.25831 6.25 8.53329 6.46993 7.9166 6.88199C7.29992 7.29404 6.81927 7.87971 6.53544 8.56494C6.25162 9.25016 6.17735 10.0042 6.32205 10.7316C6.46674 11.459 6.82389 12.1272 7.34834 12.6517C7.87279 13.1761 8.54097 13.5333 9.2684 13.6779C9.99583 13.8226 10.7498 13.7484 11.4351 13.4645C12.1203 13.1807 12.7059 12.7001 13.118 12.0834C13.5301 11.4667 13.75 10.7417 13.75 10C13.749 9.00576 13.3535 8.05253 12.6505 7.34949C11.9475 6.64645 10.9942 6.25103 9.99999 6.25ZM9.99999 12.5C9.50554 12.5 9.02219 12.3534 8.61107 12.0787C8.19994 11.804 7.87951 11.4135 7.69029 10.9567C7.50107 10.4999 7.45157 9.99723 7.54803 9.51227C7.64449 9.02732 7.88259 8.58186 8.23222 8.23223C8.58186 7.8826 9.02731 7.6445 9.51227 7.54804C9.99722 7.45157 10.4999 7.50108 10.9567 7.6903C11.4135 7.87952 11.804 8.19995 12.0787 8.61107C12.3534 9.0222 12.5 9.50555 12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 9.99999 12.5Z" fill="currentColor"/></svg></span><span class="nav__menu-txt"><b>For Hiring Managers</b><small>Review candidates. Not email threads.</small></span></a>
+        </div>
+      </div>
+      <a class="nav__item" href="#"><span>Integrations</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="nav__item" href="pricing.html"><span>Pricing</span><svg class="nav__arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 12L12 4" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5.5 4H12V10.5" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </nav>
+
+    <div class="navbar__actions">
+      <a class="navbar__login" href="auth.html?mode=login"><span>Log in</span></a>
+      <a class="btn btn--secondary btn--sm" href="auth.html">Start Free Trial
+        <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="top top--product">
+  <!-- ===== Hero (Figma 2084:14227) ===== -->
+  <section class="phero">
+    <h1 class="phero__title reveal" style="--d:.1s">One workspace for every hiring decision</h1>
+    <div class="phero__side">
+      <p class="phero__lead reveal" style="--d:.3s">Pipeline, candidate profiles, team feedback, AI screening and analytics — connected, so nothing falls between tools.</p>
+      <div class="phero__ctas reveal" style="--d:.45s">
+        <a class="btn btn--primary btn--md" href="auth.html">Get Started
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn--secondary btn--md" href="demo.html">Request a Demo
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Product window + anchor nav (Figma 2092:24925 / 2084:14236 / 2084:14868) ===== -->
+  <section class="pshow">
+    <div class="pshow__stage">
+      <img class="pshow__bg" src="assets/product-bg.jpg" alt="" aria-hidden="true">
+      <div class="pshow__window" id="pwindow">
+        <div class="window__bar">
+          <svg width="50" height="16" viewBox="0 0 50 16" fill="none" aria-hidden="true"><rect x="3" y="3" width="10" height="10" rx="5" fill="#DF3F3F"/><rect x="20" y="3" width="10" height="10" rx="5" fill="#E4C031"/><rect x="37" y="3" width="10" height="10" rx="5" fill="#2DDE68"/></svg>
+          <div class="window__url">roster.app</div>
+        </div>
+        <img class="pshow__screen-img" src="assets/managers-screen.jpg" alt="Roster Hiring Overview dashboard: Good morning, Jane — stats, time to hire, pending reviews, interviews this week" width="800" height="402">
+      </div>
+    </div>
+  </section>
+  <nav class="anchors" id="anchors" aria-label="Product sections">
+    <div class="anchors__in"><a class="anchors__chip" href="#overview">Overview</a><a class="anchors__chip" href="#pipeline">Pipeline</a><a class="anchors__chip" href="#candidates">Candidates</a><a class="anchors__chip" href="#collaboration">Collaboration</a><a class="anchors__chip" href="#analytics">Analytics</a><a class="anchors__chip" href="#ai">AI screening</a><a class="anchors__chip" href="#integrations">Integrations</a></div>
+  </nav>
+
+  <!-- ===== How a hire moves (Figma 2090:22621) ===== -->
+  <section class="flow" data-observe>
+    <h2 class="flow__title">How a hire moves through Roster</h2>
+    <ol class="flow__steps">
+        <li class="step" style="--c:#21C45E;--i:0">
+          <div class="step__card"><svg class="step__ic" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M12.25 12.25H15.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.625 7H4.375C3.89175 7 3.5 7.39175 3.5 7.875V21.875C3.5 22.3582 3.89175 22.75 4.375 22.75H23.625C24.1082 22.75 24.5 22.3582 24.5 21.875V7.875C24.5 7.39175 24.1082 7 23.625 7Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.375 7V5.25C18.375 4.78587 18.1906 4.34075 17.8624 4.01256C17.5342 3.68437 17.0891 3.5 16.625 3.5H11.375C10.9109 3.5 10.4658 3.68437 10.1376 4.01256C9.80937 4.34075 9.625 4.78587 9.625 5.25V7" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 12.9404C21.3091 14.7867 17.6866 15.7561 14 15.7503C10.3136 15.7562 6.69115 14.7872 3.5 12.9415" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sbadge badge--w"><svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M24.863 3.13717C24.643 2.91725 24.3683 2.75997 24.0672 2.68153C23.7661 2.60309 23.4496 2.60633 23.1502 2.69092H23.1338L2.14038 9.06092C1.79956 9.15914 1.49664 9.3586 1.27174 9.63288C1.04685 9.90716 0.910612 10.2433 0.881078 10.5968C0.851545 10.9502 0.930111 11.3043 1.10637 11.6121C1.28262 11.9199 1.54824 12.1669 1.86804 12.3203L11.1562 16.844L15.6733 26.1267C15.8138 26.4265 16.0372 26.6799 16.3171 26.8568C16.597 27.0338 16.9216 27.1269 17.2527 27.1253C17.303 27.1253 17.3533 27.1231 17.4037 27.1187C17.7568 27.0901 18.0928 26.9542 18.3665 26.7292C18.6402 26.5042 18.8386 26.2008 18.9349 25.8598L25.3005 4.86638C25.3005 4.86092 25.3005 4.85545 25.3005 4.84998C25.3862 4.55134 25.3908 4.23528 25.314 3.93427C25.2371 3.63325 25.0814 3.35813 24.863 3.13717ZM17.2626 25.3589L17.2571 25.3742V25.3665L12.8755 16.365L18.1255 11.115C18.2827 10.9495 18.369 10.7293 18.3661 10.5011C18.3632 10.2729 18.2712 10.0549 18.1099 9.89358C17.9485 9.73223 17.7305 9.6403 17.5024 9.63737C17.2742 9.63445 17.0539 9.72078 16.8885 9.87795L11.6385 15.1279L2.63366 10.7464H2.626H2.64132L23.6249 4.37529L17.2626 25.3589Z" fill="currentColor"/></svg>Direct apply</span></div>
+          <h3 class="step__t">1. Post a job</h3>
+          <p class="step__s">Job boards + LinkedIn</p>
+        </li>
+        <li class="step" style="--c:#52D351;--i:1">
+          <div class="step__card"><svg class="step__ic" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M24.6596 13.4391L21.4781 12.5302C18.5521 11.6937 16.3051 9.4479 15.4686 6.52073L14.5598 3.33924C14.4163 2.83874 13.5809 2.83874 13.4374 3.33924L12.5286 6.52073C11.6921 9.4479 9.44509 11.6949 6.51909 12.5302L3.33757 13.4391C3.08674 13.5103 2.91406 13.7401 2.91406 14.0002C2.91406 14.2604 3.08674 14.4891 3.33757 14.5614L6.51909 15.4703C9.44509 16.3068 11.6921 18.5526 12.5286 21.4798L13.4374 24.6612C13.5098 24.9121 13.7384 25.0848 13.9986 25.0848C14.2587 25.0848 14.4874 24.9121 14.5598 24.6612L15.4686 21.4798C16.3051 18.5526 18.5521 16.3056 21.4781 15.4703L24.6596 14.5614C24.9104 14.4902 25.0831 14.2604 25.0831 14.0002C25.0831 13.7401 24.9104 13.5114 24.6596 13.4391Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span class="sbadge badge--g"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 3.0625C10.1631 3.0625 12.1279 3.88477 13.6846 5.44141C14.8538 6.61074 15.3792 7.77766 15.3994 7.82324C15.4242 7.87915 15.4375 7.93981 15.4375 8.00098C15.4375 8.06209 15.4242 8.12287 15.3994 8.17871C15.3768 8.22954 14.8512 9.39299 13.6846 10.5596C12.1279 12.1156 10.1631 12.9375 8 12.9375C5.97218 12.9375 4.11868 12.2151 2.6123 10.8428L2.31543 10.5596C1.14888 9.39302 0.623177 8.2296 0.600586 8.17871C0.575758 8.12287 0.562549 8.06209 0.5625 8.00098C0.5625 7.9398 0.575757 7.87915 0.600586 7.82324V7.82129C0.617592 7.7796 1.14586 6.61104 2.31543 5.44141C3.87206 3.88477 5.8369 3.0625 8 3.0625ZM8 3.9375C6.05943 3.9375 4.36267 4.64407 2.95996 6.03418C2.38499 6.60586 1.89585 7.2578 1.50781 7.96973L1.49121 8L1.50781 8.03027C1.89596 8.74213 2.38509 9.39406 2.95996 9.96582C4.36267 11.3559 6.05943 12.0625 8 12.0625C12.0637 12.0625 14.0432 8.87474 14.4961 8.0293L14.5117 8L14.4951 7.96973C14.106 7.2577 13.616 6.60571 13.04 6.03418C11.6373 4.64407 9.94057 3.9375 8 3.9375ZM8 5.0625C8.77882 5.06333 9.52546 5.37312 10.0762 5.92383C10.6269 6.47454 10.9367 7.22118 10.9375 8C10.9375 8.58095 10.7651 9.14878 10.4424 9.63184C10.1196 10.1149 9.66078 10.4915 9.12402 10.7139C8.58729 10.9362 7.99655 10.9942 7.42676 10.8809C6.85701 10.7675 6.33362 10.4879 5.92285 10.0771C5.51208 9.66638 5.23251 9.14299 5.11914 8.57324C5.0058 8.00345 5.06383 7.41271 5.28613 6.87598C5.50847 6.33922 5.88509 5.88039 6.36816 5.55762C6.79093 5.27516 7.27859 5.10765 7.7832 5.07031L8 5.0625ZM8.78906 6.09473C8.41222 5.93866 7.99771 5.89796 7.59766 5.97754C7.19759 6.05713 6.83043 6.25356 6.54199 6.54199C6.25356 6.83043 6.05713 7.19759 5.97754 7.59766C5.89796 7.9977 5.93866 8.41222 6.09473 8.78906C6.25083 9.16594 6.51532 9.48821 6.85449 9.71484C7.19362 9.94138 7.59216 10.0625 8 10.0625C8.54701 10.0625 9.07122 9.8448 9.45801 9.45801C9.8448 9.07121 10.0625 8.54701 10.0625 8C10.0625 7.59216 9.94138 7.19362 9.71484 6.85449C9.48821 6.51532 9.16593 6.25083 8.78906 6.09473Z" fill="currentColor"/></svg>94% match</span></div>
+          <h3 class="step__t">2. AI screens</h3>
+          <p class="step__s">Summaries + ranking</p>
+        </li>
+        <li class="step" style="--c:#84E244;--i:2">
+          <div class="step__card"><svg class="step__ic" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M4.93828 25.1683C4.81084 25.2755 4.65544 25.3441 4.49035 25.3661C4.32526 25.388 4.15733 25.3624 4.0063 25.2922C3.85526 25.222 3.72739 25.1102 3.6377 24.9699C3.54802 24.8296 3.50025 24.6665 3.5 24.5V7C3.5 6.76794 3.59219 6.54538 3.75628 6.38128C3.92038 6.21719 4.14294 6.125 4.375 6.125H23.625C23.8571 6.125 24.0796 6.21719 24.2437 6.38128C24.4078 6.54538 24.5 6.76794 24.5 7V21C24.5 21.2321 24.4078 21.4546 24.2437 21.6187C24.0796 21.7828 23.8571 21.875 23.625 21.875H8.75L4.93828 25.1683Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 12.25H17.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 15.75H17.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sbadge badge--p"><svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M24.863 3.13717C24.643 2.91725 24.3683 2.75997 24.0672 2.68153C23.7661 2.60309 23.4496 2.60633 23.1502 2.69092H23.1338L2.14038 9.06092C1.79956 9.15914 1.49664 9.3586 1.27174 9.63288C1.04685 9.90716 0.910612 10.2433 0.881078 10.5968C0.851545 10.9502 0.930111 11.3043 1.10637 11.6121C1.28262 11.9199 1.54824 12.1669 1.86804 12.3203L11.1562 16.844L15.6733 26.1267C15.8138 26.4265 16.0372 26.6799 16.3171 26.8568C16.597 27.0338 16.9216 27.1269 17.2527 27.1253C17.303 27.1253 17.3533 27.1231 17.4037 27.1187C17.7568 27.0901 18.0928 26.9542 18.3665 26.7292C18.6402 26.5042 18.8386 26.2008 18.9349 25.8598L25.3005 4.86638C25.3005 4.86092 25.3005 4.85545 25.3005 4.84998C25.3862 4.55134 25.3908 4.23528 25.314 3.93427C25.2371 3.63325 25.0814 3.35813 24.863 3.13717ZM17.2626 25.3589L17.2571 25.3742V25.3665L12.8755 16.365L18.1255 11.115C18.2827 10.9495 18.369 10.7293 18.3661 10.5011C18.3632 10.2729 18.2712 10.0549 18.1099 9.89358C17.9485 9.73223 17.7305 9.6403 17.5024 9.63737C17.2742 9.63445 17.0539 9.72078 16.8885 9.87795L11.6385 15.1279L2.63366 10.7464H2.626H2.64132L23.6249 4.37529L17.2626 25.3589Z" fill="currentColor"/></svg>Awaiting feedback</span></div>
+          <h3 class="step__t">3. Team reviews</h3>
+          <p class="step__s">Scorecards + feedback</p>
+        </li>
+        <li class="step" style="--c:#B5F037;--i:3">
+          <div class="step__card"><svg class="step__ic" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M22.75 3.5H20.125V2.625C20.125 2.39294 20.0328 2.17038 19.8687 2.00628C19.7046 1.84219 19.4821 1.75 19.25 1.75C19.0179 1.75 18.7954 1.84219 18.6313 2.00628C18.4672 2.17038 18.375 2.39294 18.375 2.625V3.5H9.625V2.625C9.625 2.39294 9.53281 2.17038 9.36872 2.00628C9.20462 1.84219 8.98206 1.75 8.75 1.75C8.51794 1.75 8.29538 1.84219 8.13128 2.00628C7.96719 2.17038 7.875 2.39294 7.875 2.625V3.5H5.25C4.78587 3.5 4.34075 3.68437 4.01256 4.01256C3.68437 4.34075 3.5 4.78587 3.5 5.25V22.75C3.5 23.2141 3.68437 23.6592 4.01256 23.9874C4.34075 24.3156 4.78587 24.5 5.25 24.5H22.75C23.2141 24.5 23.6592 24.3156 23.9874 23.9874C24.3156 23.6592 24.5 23.2141 24.5 22.75V5.25C24.5 4.78587 24.3156 4.34075 23.9874 4.01256C23.6592 3.68437 23.2141 3.5 22.75 3.5ZM7.875 5.25V6.125C7.875 6.35706 7.96719 6.57962 8.13128 6.74372C8.29538 6.90781 8.51794 7 8.75 7C8.98206 7 9.20462 6.90781 9.36872 6.74372C9.53281 6.57962 9.625 6.35706 9.625 6.125V5.25H18.375V6.125C18.375 6.35706 18.4672 6.57962 18.6313 6.74372C18.7954 6.90781 19.0179 7 19.25 7C19.4821 7 19.7046 6.90781 19.8687 6.74372C20.0328 6.57962 20.125 6.35706 20.125 6.125V5.25H22.75V8.75H5.25V5.25H7.875ZM22.75 22.75H5.25V10.5H22.75V22.75Z" fill="currentColor"/></svg><span class="sbadge badge--b"><svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M22.75 3.5H20.125V2.625C20.125 2.39294 20.0328 2.17038 19.8687 2.00628C19.7046 1.84219 19.4821 1.75 19.25 1.75C19.0179 1.75 18.7954 1.84219 18.6313 2.00628C18.4672 2.17038 18.375 2.39294 18.375 2.625V3.5H9.625V2.625C9.625 2.39294 9.53281 2.17038 9.36872 2.00628C9.20462 1.84219 8.98206 1.75 8.75 1.75C8.51794 1.75 8.29538 1.84219 8.13128 2.00628C7.96719 2.17038 7.875 2.39294 7.875 2.625V3.5H5.25C4.78587 3.5 4.34075 3.68437 4.01256 4.01256C3.68437 4.34075 3.5 4.78587 3.5 5.25V22.75C3.5 23.2141 3.68437 23.6592 4.01256 23.9874C4.34075 24.3156 4.78587 24.5 5.25 24.5H22.75C23.2141 24.5 23.6592 24.3156 23.9874 23.9874C24.3156 23.6592 24.5 23.2141 24.5 22.75V5.25C24.5 4.78587 24.3156 4.34075 23.9874 4.01256C23.6592 3.68437 23.2141 3.5 22.75 3.5ZM7.875 5.25V6.125C7.875 6.35706 7.96719 6.57962 8.13128 6.74372C8.29538 6.90781 8.51794 7 8.75 7C8.98206 7 9.20462 6.90781 9.36872 6.74372C9.53281 6.57962 9.625 6.35706 9.625 6.125V5.25H18.375V6.125C18.375 6.35706 18.4672 6.57962 18.6313 6.74372C18.7954 6.90781 19.0179 7 19.25 7C19.4821 7 19.7046 6.90781 19.8687 6.74372C20.0328 6.57962 20.125 6.35706 20.125 6.125V5.25H22.75V8.75H5.25V5.25H7.875ZM22.75 22.75H5.25V10.5H22.75V22.75Z" fill="currentColor"/></svg>Interview · Thu 3pm</span></div>
+          <h3 class="step__t">4. Interview</h3>
+          <p class="step__s">Calendar sync</p>
+        </li>
+        <li class="step" style="--c:#E6FF2A;--i:4">
+          <div class="step__card"><svg class="step__ic" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M24.863 3.13717C24.643 2.91725 24.3683 2.75997 24.0672 2.68153C23.7661 2.60309 23.4496 2.60633 23.1502 2.69092H23.1338L2.14038 9.06092C1.79956 9.15914 1.49664 9.3586 1.27174 9.63288C1.04685 9.90716 0.910612 10.2433 0.881078 10.5968C0.851545 10.9502 0.930111 11.3043 1.10637 11.6121C1.28262 11.9199 1.54824 12.1669 1.86804 12.3203L11.1562 16.844L15.6733 26.1267C15.8138 26.4265 16.0372 26.6799 16.3171 26.8568C16.597 27.0338 16.9216 27.1269 17.2527 27.1253C17.303 27.1253 17.3533 27.1231 17.4037 27.1187C17.7568 27.0901 18.0928 26.9542 18.3665 26.7292C18.6402 26.5042 18.8386 26.2008 18.9349 25.8598L25.3005 4.86638C25.3005 4.86092 25.3005 4.85545 25.3005 4.84998C25.3862 4.55134 25.3908 4.23528 25.314 3.93427C25.2371 3.63325 25.0814 3.35813 24.863 3.13717ZM17.2626 25.3589L17.2571 25.3742V25.3665L12.8755 16.365L18.1255 11.115C18.2827 10.9495 18.369 10.7293 18.3661 10.5011C18.3632 10.2729 18.2712 10.0549 18.1099 9.89358C17.9485 9.73223 17.7305 9.6403 17.5024 9.63737C17.2742 9.63445 17.0539 9.72078 16.8885 9.87795L11.6385 15.1279L2.63366 10.7464H2.626H2.64132L23.6249 4.37529L17.2626 25.3589Z" fill="currentColor"/></svg><span class="sbadge badge--y"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M14 3H2C1.86739 3 1.74021 3.05268 1.64645 3.14645C1.55268 3.24021 1.5 3.36739 1.5 3.5V12C1.5 12.2652 1.60536 12.5196 1.79289 12.7071C1.98043 12.8946 2.23478 13 2.5 13H13.5C13.7652 13 14.0196 12.8946 14.2071 12.7071C14.3946 12.5196 14.5 12.2652 14.5 12V3.5C14.5 3.36739 14.4473 3.24021 14.3536 3.14645C14.2598 3.05268 14.1326 3 14 3ZM12.7144 4L8 8.32187L3.28562 4H12.7144ZM13.5 12H2.5V4.63688L7.66187 9.36875C7.75412 9.45343 7.87478 9.50041 8 9.50041C8.12522 9.50041 8.24588 9.45343 8.33813 9.36875L13.5 4.63688V12Z" fill="currentColor"/></svg>Offer sent · exp Fri</span></div>
+          <h3 class="step__t">5. Decide</h3>
+          <p class="step__s">Move to offer</p>
+        </li>
+    </ol>
+  </section>
+
+  <!-- ===== Feature deck: 5 modules pin and stack, active gradient border passes on ===== -->
+  <div class="pdeck" id="pdeck">
+    <!-- Module / Hiring Overview (Figma 2084:14916) -->
+    <section class="mod pcard" id="overview" style="--i:0" data-observe>
+      <div class="mod__row">
+        <div class="mod__text">
+          <span class="tag">Hiring Overview</span>
+          <h2 class="mod__title">Start every day knowing what needs you.</h2>
+          <p class="mod__desc">Your home screen pulls pending reviews, today's interviews and stalled roles into one view.</p>
+          <ul class="mod__list"><li style="--k:0">Needs Action — overdue roles, cold candidates, expiring offers</li><li style="--k:1">Today's schedule with Google Meet &amp; Zoom links</li><li style="--k:2">Active roles with live pipeline health</li></ul>
+        </div>
+        <div class="mod__visual">
+          <span class="mod__glow" style="left:14.54%;top:12.14%;width:69.94%;height:90.00%;--o:0.3" aria-hidden="true"></span>
+          <img class="mod__layer ly--a" src="assets/needs-action.webp" alt="Needs Action: overdue roles, candidates going cold, urgent matches, expiring offers" style="left:4.432%;top:5.714%;width:48.615%" data-speed="0" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/interviews-week.webp" alt="Interviews this week: today’s schedule with Google Meet and Zoom links" style="left:54.709%;top:5.714%;width:31.648%" data-speed="0.04" loading="lazy">
+          <img class="mod__layer ly--c" src="assets/float-role.png" alt="Active role: Sr. Frontend Engineer, 28 active candidates" style="left:48.199%;top:66.190%;width:43.352%" data-speed="0.09" loading="lazy">
+        </div>
+      </div>
+    </section>
+    <!-- Module / Pipeline (Figma 2084:15158) -->
+    <section class="mod pcard mod--rev" id="pipeline" style="--i:1" data-observe>
+      <div class="mod__row">
+        <div class="mod__visual">
+          <span class="mod__glow" style="left:-14.27%;top:0.00%;width:98.75%;height:115.24%;--o:0.3" aria-hidden="true"></span>
+          <span class="mod__glow" style="left:25.07%;top:45.00%;width:90.03%;height:90.00%;--o:0.7" aria-hidden="true"></span>
+          <img class="mod__layer ly--a" src="assets/kanban.webp" alt="Kanban board: Applied, Screening, Interview, Assessment columns with candidate cards" style="left:3.324%;top:5.714%;width:96.676%" data-speed="0" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/list-view.webp" alt="List view: candidates with stage, match score, next action and time in stage" style="left:22.438%;top:22.857%;width:77.562%" data-speed="0.06" loading="lazy">
+        </div>
+        <div class="mod__text">
+          <span class="tag">Pipeline</span>
+          <h2 class="mod__title">See every candidate, in every stage.</h2>
+          <p class="mod__desc">Board and list views for each role. Move candidates forward, filter by stage, score or source.</p>
+          <ul class="mod__list"><li style="--k:0">Kanban board per role</li><li style="--k:1">List view with match score and time in stage</li><li style="--k:2">Filters by stage, assignee and source</li></ul>
+        </div>
+      </div>
+    </section>
+    <!-- Module / Candidate Profiles (Figma 2084:15235) -->
+    <section class="mod pcard" id="candidates" style="--i:2" data-observe>
+      <div class="mod__row">
+        <div class="mod__text">
+          <span class="tag">Candidate Profiles</span>
+          <h2 class="mod__title">Everything you need to make a call.</h2>
+          <p class="mod__desc">Resume, AI summary, scorecards and team feedback — on one profile.</p>
+          <ul class="mod__list"><li style="--k:0">Structured scorecards</li><li style="--k:1">Every reviewer's feedback in one place</li><li style="--k:2">Move to offer or schedule a call in one click</li></ul>
+        </div>
+        <div class="mod__visual">
+          <span class="mod__glow" style="left:20.00%;top:12.00%;width:70.00%;height:80.00%;--o:0.7" aria-hidden="true"></span>
+          <img class="mod__layer ly--a" src="assets/scorecard.webp" alt="Scorecard for Sarah Chen: criteria match" style="left:4.986%;top:4.286%;width:77.562%" data-speed="0" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/candidate-card.webp" alt="Candidate card: Sarah Chen, 91% match, review pending" style="left:51.524%;top:45.238%;width:48.476%" data-speed="0.07" loading="lazy">
+        </div>
+      </div>
+    </section>
+    <!-- Module / Team Collaboration (Figma 2084:15250) -->
+    <section class="mod pcard mod--rev" id="collaboration" style="--i:3" data-observe>
+      <div class="mod__row">
+        <div class="mod__visual">
+          <span class="mod__glow" style="left:-12.33%;top:10.00%;width:90.30%;height:78.81%;--o:0.7" aria-hidden="true"></span>
+          <img class="mod__layer ly--a" src="assets/reviewer-feedback.webp" alt="Reviewer feedback: Anna K. and Mark T. reviewed, Sarah L. pending; Move to Offer or Schedule Call" style="left:0.277%;top:9.524%;width:63.227%" data-speed="0" loading="lazy">
+          <img class="mod__layer ly--c" src="assets/recent-activity.webp" alt="Recent activity feed: stage moves, feedback and pending reviewers" style="left:49.169%;top:54.524%;width:46.260%" data-speed="0.08" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/collab-candidate.webp" alt="Candidate card: Sarah Chen, 91% match" style="left:48.615%;top:14.524%;width:42.521%" data-speed="0.05" loading="lazy">
+        </div>
+        <div class="mod__text">
+          <span class="tag">Team Collaboration</span>
+          <h2 class="mod__title">Feedback that actually reaches the decision.</h2>
+          <p class="mod__desc">Hiring managers review in minutes. Nobody chases scorecards in Slack.</p>
+          <ul class="mod__list"><li style="--k:0">Reviewer status: reviewed / pending</li><li style="--k:1">Slack notification when a candidate needs review</li><li style="--k:2">Recent activity feed for the whole team</li></ul>
+        </div>
+      </div>
+    </section>
+    <!-- Module / Analytics (Figma 2084:15368) -->
+    <section class="mod pcard" id="analytics" style="--i:4" data-observe>
+      <div class="mod__row">
+        <div class="mod__text">
+          <span class="tag">Analytics</span>
+          <h2 class="mod__title">Know where hiring slows down.</h2>
+          <p class="mod__desc">Time to hire, hiring velocity and source performance — tracked automatically.</p>
+          <ul class="mod__list"><li style="--k:0">Avg. time to hire over the last 12 months</li><li style="--k:1">Roles closed per quarter</li><li style="--k:2">Source breakdown: referral, LinkedIn, Indeed</li></ul>
+        </div>
+        <div class="mod__visual">
+          <span class="mod__glow" style="left:-8.59%;top:-5.48%;width:90.03%;height:88.10%;--o:0.1" aria-hidden="true"></span>
+          <img class="mod__layer ly--a" src="assets/time-to-hire.webp" alt="Avg. Time to Hire over the last 12 months: down to 8 days in September" style="left:2.493%;top:5.714%;width:96.676%" data-speed="0" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/hiring-velocity.webp" alt="Hiring velocity: 8 roles closed this quarter; source breakdown Referral 42%, LinkedIn 31%, Indeed 18%, Other 9%" style="left:3.324%;top:49.524%;width:29.017%" data-speed="0.03" loading="lazy">
+          <img class="mod__layer ly--b" src="assets/kpi-row.webp" alt="Total candidates 64, roles open 4, avg. hire 8 days, total closed roles 96" style="left:36.427%;top:49.524%;width:61.565%" data-speed="0.05" loading="lazy">
+          <img class="mod__layer ly--c" src="assets/active-role-sm.webp" alt="Active role: Sr. Frontend Engineer, 28 active candidates" style="left:68.975%;top:66.190%;width:28.947%" data-speed="0.08" loading="lazy">
+          <img class="mod__layer ly--c mod__mark" src="assets/title-arrow.svg" alt="" aria-hidden="true" style="left:36.981%;top:80.000%;width:8.864%" data-speed="0" loading="lazy">
+        </div>
+      </div>
+    </section>
+    <div class="pdeck__tail" aria-hidden="true"></div>
+  </div>
+
+  <!-- ===== AI screening (Figma 2084:15292) ===== -->
+  <section class="aiscr" id="ai" data-observe>
+    <img class="aiscr__bg" src="assets/product-bg.jpg" alt="" aria-hidden="true" loading="lazy">
+    <div class="aiscr__in">
+      <div class="aiscr__text">
+        <div class="aiscr__copy">
+          <h2 class="aiscr__title"><em>Let AI do the screening.</em><br>You make the decisions.</h2>
+          <p class="aiscr__desc">Roster's AI reads every resume, scores candidates against your criteria, and surfaces the best matches — before your team even opens the inbox.</p>
+          <ul class="aiscr__list">
+            <li style="--k:0"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Auto-generated candidate summaries</li>
+            <li style="--k:1"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Smart candidate ranking</li>
+            <li style="--k:2"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Automated screening questions</li>
+          </ul>
+        </div>
+        <img class="aiscr__mark" src="assets/title-arrow.svg" alt="" aria-hidden="true">
+      </div>
+      <div class="aiscr__side">
+        <div class="aiscr__stats">
+          <div class="aistat" style="--k:0">
+            <span class="aistat__glow" aria-hidden="true"></span>
+            <span class="tag">Screening status</span>
+            <div><b><span data-count="12">12</span> / 47</b><p>candidates auto-screened this morning</p></div>
+          </div>
+          <div class="aistat aistat--dark" style="--k:1">
+            <span class="aistat__glow" aria-hidden="true"></span>
+            <span class="tag">Time saved</span>
+            <div><b>~<span data-count="3.5" data-dec="1">3.5</span> hrs</b><p>of manual review replaced by AI</p></div>
+          </div>
+        </div>
+        <div class="aiscr__sum">
+          <span class="tag tag--os">AI Candidate Summary — generated in 2s</span>
+          <img src="assets/ai-summary.webp" alt="AI candidate summary for Sarah Chen: match score 91/100, why she's a strong fit, auto-generated screening questions, recommendation: move to screening" width="457" height="326" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Even more inside (Figma 2090:22693) — stairs rise one by one on scroll ===== -->
+  <div class="more-pin" id="morePin">
+  <section class="more" id="more">
+    <div class="sec-head more__head">
+      <h2 class="sec-head__title">Even more inside</h2>
+      <p class="sec-head__sub">From your first hire to enterprise-ready.</p>
+    </div>
+    <ol class="stairs" id="stairs">
+        <li class="stair" style="--i:0;--c:#21C45E;--c5:rgba(33,196,94,.5);--h:270px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.52734 17.9773C3.43631 18.0539 3.32531 18.1029 3.20739 18.1186C3.08947 18.1343 2.96952 18.116 2.86164 18.0659C2.75376 18.0157 2.66242 17.9359 2.59836 17.8356C2.5343 17.7354 2.50018 17.619 2.5 17.5V5C2.5 4.83424 2.56585 4.67527 2.68306 4.55806C2.80027 4.44085 2.95924 4.375 3.125 4.375H16.875C17.0408 4.375 17.1997 4.44085 17.3169 4.55806C17.4342 4.67527 17.5 4.83424 17.5 5V15C17.5 15.1658 17.4342 15.3247 17.3169 15.4419C17.1997 15.5592 17.0408 15.625 16.875 15.625H6.25L3.52734 17.9773Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 8.75H12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 11.25H12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="stair__t">Slack notifications</h3>
+            <p class="stair__d">Know the moment a candidate needs you</p>
+          </div>
+        </li>
+        <li class="stair" style="--i:1;--c:#49D054;--c5:rgba(73,208,84,.5);--h:300px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.25 2.5H14.375V1.875C14.375 1.70924 14.3092 1.55027 14.1919 1.43306C14.0747 1.31585 13.9158 1.25 13.75 1.25C13.5842 1.25 13.4253 1.31585 13.3081 1.43306C13.1908 1.55027 13.125 1.70924 13.125 1.875V2.5H6.875V1.875C6.875 1.70924 6.80915 1.55027 6.69194 1.43306C6.57473 1.31585 6.41576 1.25 6.25 1.25C6.08424 1.25 5.92527 1.31585 5.80806 1.43306C5.69085 1.55027 5.625 1.70924 5.625 1.875V2.5H3.75C3.41848 2.5 3.10054 2.6317 2.86612 2.86612C2.6317 3.10054 2.5 3.41848 2.5 3.75V16.25C2.5 16.5815 2.6317 16.8995 2.86612 17.1339C3.10054 17.3683 3.41848 17.5 3.75 17.5H16.25C16.5815 17.5 16.8995 17.3683 17.1339 17.1339C17.3683 16.8995 17.5 16.5815 17.5 16.25V3.75C17.5 3.41848 17.3683 3.10054 17.1339 2.86612C16.8995 2.6317 16.5815 2.5 16.25 2.5ZM5.625 3.75V4.375C5.625 4.54076 5.69085 4.69973 5.80806 4.81694C5.92527 4.93415 6.08424 5 6.25 5C6.41576 5 6.57473 4.93415 6.69194 4.81694C6.80915 4.69973 6.875 4.54076 6.875 4.375V3.75H13.125V4.375C13.125 4.54076 13.1908 4.69973 13.3081 4.81694C13.4253 4.93415 13.5842 5 13.75 5C13.9158 5 14.0747 4.93415 14.1919 4.81694C14.3092 4.69973 14.375 4.54076 14.375 4.375V3.75H16.25V6.25H3.75V3.75H5.625ZM16.25 16.25H3.75V7.5H16.25V16.25Z" fill="white"/></svg></span>
+            <h3 class="stair__t">Calendar sync</h3>
+            <p class="stair__d">Google Calendar, Meet and Zoom</p>
+          </div>
+        </li>
+        <li class="stair" style="--i:2;--c:#70DC49;--c5:rgba(112,220,73,.5);--h:330px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M8.75 8.75H11.25" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.875 5H3.125C2.77982 5 2.5 5.27982 2.5 5.625V15.625C2.5 15.9702 2.77982 16.25 3.125 16.25H16.875C17.2202 16.25 17.5 15.9702 17.5 15.625V5.625C17.5 5.27982 17.2202 5 16.875 5Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.125 5V3.75C13.125 3.41848 12.9933 3.10054 12.7589 2.86612C12.5245 2.6317 12.2065 2.5 11.875 2.5H8.125C7.79348 2.5 7.47554 2.6317 7.24112 2.86612C7.0067 3.10054 6.875 3.41848 6.875 3.75V5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 9.24316C15.2208 10.5619 12.6333 11.2543 10 11.2502C7.36684 11.2544 4.77939 10.5623 2.5 9.24395" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="stair__t">Job boards</h3>
+            <p class="stair__d">Post to major boards from one place</p>
+          </div>
+        </li>
+        <li class="stair" style="--i:3;--c:#97E83F;--c5:rgba(151,232,63,.5);--h:360px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.375 1.9375H11.875C11.9489 1.93744 12.0225 1.95224 12.0908 1.98047C12.1589 2.00869 12.2213 2.04947 12.2734 2.10156L16.6484 6.47656C16.7005 6.52872 16.7413 6.59109 16.7695 6.65918C16.7978 6.72746 16.8126 6.80111 16.8125 6.875V16.875C16.8125 17.1899 16.6875 17.4921 16.4648 17.7148C16.2421 17.9375 15.9399 18.0625 15.625 18.0625H4.375C4.06006 18.0625 3.75786 17.9375 3.53516 17.7148C3.31246 17.4921 3.1875 17.1899 3.1875 16.875V3.125L3.19336 3.00781C3.22032 2.7359 3.34025 2.48006 3.53516 2.28516C3.75786 2.06246 4.06006 1.9375 4.375 1.9375ZM4.3125 16.9375H15.6875V7.4375H11.875C11.7258 7.4375 11.583 7.37795 11.4775 7.27246C11.372 7.16697 11.3125 7.02418 11.3125 6.875V3.0625H4.3125V16.9375ZM7.5 12.5625H12.5C12.6492 12.5625 12.792 12.622 12.8975 12.7275C13.003 12.833 13.0625 12.9758 13.0625 13.125C13.0625 13.2742 13.003 13.417 12.8975 13.5225C12.792 13.628 12.6492 13.6875 12.5 13.6875H7.5C7.35082 13.6875 7.20803 13.628 7.10254 13.5225C6.99705 13.417 6.9375 13.2742 6.9375 13.125C6.9375 12.9758 6.99705 12.833 7.10254 12.7275C7.20803 12.622 7.35082 12.5625 7.5 12.5625ZM7.5 10.0625H12.5C12.6492 10.0625 12.792 10.122 12.8975 10.2275C13.003 10.333 13.0625 10.4758 13.0625 10.625C13.0625 10.7742 13.003 10.917 12.8975 11.0225C12.792 11.128 12.6492 11.1875 12.5 11.1875H7.5C7.35082 11.1875 7.20803 11.128 7.10254 11.0225C6.99705 10.917 6.9375 10.7742 6.9375 10.625C6.9375 10.4758 6.99705 10.333 7.10254 10.2275C7.20803 10.122 7.35082 10.0625 7.5 10.0625ZM12.4375 6.3125H14.8926L14.7852 6.20605L12.5439 3.96484L12.4375 3.85742V6.3125Z" fill="white" stroke="white" stroke-width="0.125"/></svg></span>
+            <h3 class="stair__t">Structured scorecards</h3>
+            <p class="stair__d">Same criteria for every reviewer</p>
+          </div>
+        </li>
+        <li class="stair" style="--i:4;--c:#BFF335;--c5:rgba(191,243,53,.5);--h:390px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 13.125C11.7259 13.125 13.125 11.7259 13.125 10C13.125 8.27411 11.7259 6.875 10 6.875C8.27411 6.875 6.875 8.27411 6.875 10C6.875 11.7259 8.27411 13.125 10 13.125Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.23691 13.9135C2.89158 13.3187 2.62701 12.6805 2.4502 12.0158L3.76113 10.3752C3.74629 10.1244 3.74629 9.87289 3.76113 9.62207L2.45098 7.98145C2.62749 7.31666 2.89152 6.67827 3.23613 6.08301L5.32285 5.84863C5.48949 5.66089 5.66714 5.48324 5.85488 5.3166L6.08926 3.23066C6.68366 2.88769 7.32101 2.62524 7.98457 2.4502L9.6252 3.76113C9.87602 3.74629 10.1275 3.74629 10.3783 3.76113L12.0189 2.45098C12.6837 2.62749 13.3221 2.89152 13.9174 3.23613L14.1518 5.32285C14.3395 5.48949 14.5172 5.66714 14.6838 5.85488L16.7697 6.08926C17.1151 6.68407 17.3796 7.32224 17.5564 7.98691L16.2455 9.62754C16.2604 9.87836 16.2604 10.1298 16.2455 10.3807L17.5557 12.0213C17.3804 12.6859 17.1177 13.3243 16.7744 13.9197L14.6877 14.1541C14.5211 14.3418 14.3434 14.5195 14.1557 14.6861L13.9213 16.7721C13.3265 17.1174 12.6883 17.382 12.0236 17.5588L10.383 16.2479C10.1322 16.2627 9.88071 16.2627 9.62988 16.2479L7.98926 17.558C7.32467 17.3827 6.68628 17.12 6.09082 16.7768L5.85645 14.69C5.66871 14.5234 5.49105 14.3457 5.32441 14.158L3.23691 13.9135Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <h3 class="stair__t">SSO &amp; permissions</h3>
+            <p class="stair__d">Control who sees what</p>
+          </div>
+        </li>
+        <li class="stair" style="--i:5;--c:#E6FF2A;--c5:rgba(230,255,42,.5);--h:420px">
+          <div class="stair__in">
+            <span class="stair__ic"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M19.3211 9.74688C19.2937 9.68516 18.632 8.21719 17.1609 6.74609C15.2008 4.78594 12.725 3.75 9.99999 3.75C7.27499 3.75 4.79921 4.78594 2.83905 6.74609C1.36796 8.21719 0.703118 9.6875 0.678899 9.74688C0.643362 9.82681 0.625 9.91331 0.625 10.0008C0.625 10.0883 0.643362 10.1748 0.678899 10.2547C0.706243 10.3164 1.36796 11.7836 2.83905 13.2547C4.79921 15.2141 7.27499 16.25 9.99999 16.25C12.725 16.25 15.2008 15.2141 17.1609 13.2547C18.632 11.7836 19.2937 10.3164 19.3211 10.2547C19.3566 10.1748 19.375 10.0883 19.375 10.0008C19.375 9.91331 19.3566 9.82681 19.3211 9.74688ZM9.99999 15C7.5953 15 5.49452 14.1258 3.75546 12.4023C3.0419 11.6927 2.43483 10.8836 1.95312 10C2.4347 9.11636 3.04179 8.30717 3.75546 7.59766C5.49452 5.87422 7.5953 5 9.99999 5C12.4047 5 14.5055 5.87422 16.2445 7.59766C16.9595 8.307 17.5679 9.11619 18.0508 10C17.4875 11.0516 15.0336 15 9.99999 15ZM9.99999 6.25C9.25831 6.25 8.53329 6.46993 7.9166 6.88199C7.29992 7.29404 6.81927 7.87971 6.53544 8.56494C6.25162 9.25016 6.17735 10.0042 6.32205 10.7316C6.46674 11.459 6.82389 12.1272 7.34834 12.6517C7.87279 13.1761 8.54097 13.5333 9.2684 13.6779C9.99583 13.8226 10.7498 13.7484 11.4351 13.4645C12.1203 13.1807 12.7059 12.7001 13.118 12.0834C13.5301 11.4667 13.75 10.7417 13.75 10C13.749 9.00576 13.3535 8.05253 12.6505 7.34949C11.9475 6.64645 10.9942 6.25103 9.99999 6.25ZM9.99999 12.5C9.50554 12.5 9.02219 12.3534 8.61107 12.0787C8.19994 11.804 7.87951 11.4135 7.69029 10.9567C7.50107 10.4999 7.45157 9.99723 7.54803 9.51227C7.64449 9.02732 7.88259 8.58186 8.23222 8.23223C8.58186 7.8826 9.02731 7.6445 9.51227 7.54804C9.99722 7.45157 10.4999 7.50108 10.9567 7.6903C11.4135 7.87952 11.804 8.19995 12.0787 8.61107C12.3534 9.0222 12.5 9.50555 12.5 10C12.5 10.663 12.2366 11.2989 11.7678 11.7678C11.2989 12.2366 10.663 12.5 9.99999 12.5Z" fill="white"/></svg></span>
+            <h3 class="stair__t">GDPR + SOC 2</h3>
+            <p class="stair__d">Candidate data stays protected</p>
+          </div>
+        </li>
+    </ol>
+  </section>
+    <div class="more-pin__space" aria-hidden="true"></div>
+  </div>
+
+  <!-- ===== Integrations (Figma 2109:25917) ===== -->
+  <section class="integr" id="integrations" data-observe>
+    <div class="integr__in">
+      <div class="integr__text">
+        <div class="integr__copy" style="--d:0s">
+          <span class="tag">Integrations</span>
+          <h2 class="sec-head__title">Works with the tools your team already uses</h2>
+          <p class="integr__desc">Connect Roster to your existing stack in minutes. No IT team required. No workflow disruption.</p>
+          <div class="integr__list"><p style="--d:0.35s"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Get notified in Slack the moment a candidate needs review</p><p style="--d:0.43s"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Schedule interviews without leaving Roster — synced with Google Calendar</p><p style="--d:0.51s"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Source directly from LinkedIn into your pipeline</p><p style="--d:0.59s"><img src="assets/arrow-gray.svg" alt="" aria-hidden="true">Post to all major job boards from one place</p></div>
+        </div>
+        <a class="btn btn--secondary btn--sm" href="#" style="--d:.7s">View all integrations
+          <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+      <div class="integr__art">
+        <div class="integr__hub" aria-hidden="true"></div>
+        <img src="assets/integrations.svg" alt="Integrations: Slack, Google Sheets, Google Calendar, Greenhouse, LinkedIn, Indeed — connected to Roster" width="634" height="465">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA (Figma 2078:3909) ===== -->
+  <section class="cta" data-observe>
+    <div class="cta__box">
+      <img class="cta__bg" src="assets/statement-bg.jpg" alt="" aria-hidden="true">
+      <span class="cta__el" style="left:225px;top:523px" aria-hidden="true"></span>
+      <span class="cta__el" style="left:50%;top:263px;transform:translateX(-50%)" aria-hidden="true"></span>
+      <div class="cta__text">
+        <div class="cta__copy">
+          <p class="cta__kicker" style="--d:0s">Ready to move faster?</p>
+          <h2 class="cta__title" style="--d:.08s">Start hiring <em>better today</em>.</h2>
+          <p class="cta__desc" style="--d:.16s">Join teams that moved from chaos to clarity — and hired faster because of it. No setup fees. No long contracts.</p>
+        </div>
+        <div class="cta__actions" style="--d:.26s">
+          <div class="cta__btns">
+          <a class="btn btn--primary btn--md" href="auth.html">Start Free Trial
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn--secondary btn--md" href="demo.html">Request a Demo
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#E6FF2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          </div>
+          <p class="cta__note">No credit card required · 30 min · See the full product</p>
+        </div>
+      </div>
+      <figure class="cta__quote" style="margin:0">
+        <blockquote>"I set it up myself in an afternoon. We were reviewing real candidates the same day."</blockquote>
+        <figcaption class="cta__who"><span><img src="assets/avatar-lisa.jpg" alt="" width="32" height="32" onerror="this.style.visibility='hidden'"></span>Lisa M. · Founder &amp; CEO, Early-stage Startup</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-observe>
+  <div class="footer__glow" aria-hidden="true"></div>
+  <hr>
+  <div class="footer__top">
+    <div class="footer__row">
+      <h2 class="footer__h">Have questions? We're here.</h2>
+      <div class="footer__right"><p class="footer__sub">Talk to our team, explore the product, or just say hello.</p></div>
+    </div>
+    <div class="contacts"><a class="contact" href="#"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Book a demo call</small><b class="">calendly.com/roster</b></span></a><a class="contact" href="mailto:hello@roster.app"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Send us an email</small><b class="">hello@roster.app</b></span></a><a class="contact" href="#"><img src="assets/bullet-arrow.svg" alt="" aria-hidden="true"><span><small>Read our docs</small><b class="u">docs.roster.app</b></span></a></div>
+  </div>
+  <hr>
+  <div class="footer__nav">
+    <nav class="fcols" aria-label="Footer"><div class="fcol"><h3>Product</h3><a href="#">Pipeline</a><a href="#">Candidate Profiles</a><a href="#">Collaboration</a><a href="#">AI Features</a><a href="#">Analytics</a><a href="#">Integrations</a></div><div class="fcol"><h3>Solutions</h3><a href="solutions-founders.html">For Startups</a><a href="solutions-managers.html">For Hiring Managers</a><a href="solutions-hr.html">For HR Teams</a><a href="pricing.html">Pricing</a></div><div class="fcol"><h3>Resources</h3><a href="#">Blog</a><a href="#">Hiring Guides</a><a href="#">Templates</a><a href="#">Changelog</a><a href="#">API Docs</a></div><div class="fcol"><h3>Company</h3><a href="#">About</a><a href="#">Careers</a><a href="#">Contact</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></nav>
+    <div class="footer__right"><div class="socials"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.9962 2H8.00375C4.70169 2 2 4.70169 2 8.00375V15.9962C2 19.2983 4.70169 22 8.00375 22H15.9962C19.2983 22 22 19.2983 22 15.9962V8.00375C22 4.70169 19.3358 2 15.9962 2ZM17.2345 12.0188C17.2345 14.8705 14.9456 17.1595 12.0938 17.1595C9.24203 17.1595 6.9531 14.8705 6.9531 12.0188C6.9531 9.16698 9.24203 6.87805 12.0938 6.87805C14.9081 6.87805 17.2345 9.16698 17.2345 12.0188ZM17.2345 8.0788C16.5591 8.0788 16.0338 7.55347 16.0338 6.87805C16.0338 6.20263 16.5591 5.6773 17.2345 5.6773C17.9099 5.6773 18.4353 6.20263 18.4353 6.87805C18.4353 7.51595 17.8724 8.0788 17.2345 8.0788Z"/><path d="M12 9C10.3571 9 9 10.3214 9 12C9 13.6786 10.3214 15 12 15C13.6429 15 15 13.6786 15 12C14.9643 10.3214 13.6429 9 12 9Z"/></svg></a><a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.28291 22H2.35363V8.04563H6.28291V22ZM4.31827 6.44867C3.0609 6.44867 2 5.46008 2 4.24335C2 3.02662 3.02161 2 4.27898 2C5.53635 2 6.59725 2.98859 6.59725 4.20532C6.59725 5.42205 5.57564 6.44867 4.31827 6.44867ZM22 22H18.0707V14.8897C18.0707 10.6312 12.8448 10.9354 12.8448 14.8897V22H8.91552V8.04563H12.8448V10.289C14.6916 7.01901 22 6.75285 22 13.4449V22Z"/></svg></a><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.3815 2H21.7537L14.3496 10.4871L23 22H16.2116L10.8967 15.0037L4.81206 22H1.43985L9.28391 12.9225L1 2H7.95701L12.7587 8.39114L18.3815 2ZM17.2013 20.0074H19.0706L6.97467 3.91882H4.96601L17.2013 20.0074Z"/></svg></a><a href="mailto:hello@roster.app" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 20C3.45 20 2.97917 19.8042 2.5875 19.4125C2.19583 19.0208 2 18.55 2 18V6C2 5.45 2.19583 4.97917 2.5875 4.5875C2.97917 4.19583 3.45 4 4 4H20C20.55 4 21.0208 4.19583 21.4125 4.5875C21.8042 4.97917 22 5.45 22 6V18C22 18.55 21.8042 19.0208 21.4125 19.4125C21.0208 19.8042 20.55 20 20 20H4ZM12 13L20 8V6L12 11L4 6V8L12 13Z"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.49084 8.66667H7V12H9.49084V22H13.6667V12H16.707L17 8.66667H13.6667V7.27472C13.6667 6.46886 13.8132 6.17582 14.5824 6.17582H17V2H13.8132C10.8095 2 9.49084 3.31868 9.49084 5.84615V8.66667Z"/></svg></a></div></div>
+  </div>
+  <hr>
+  <div class="footer__row news">
+    <div><h3>Hiring insights, delivered monthly.</h3><p>Tips, product updates, and hiring benchmarks for fast-growing teams.</p></div>
+    <div class="footer__right">
+      <form class="news__form" novalidate>
+        <input type="email" name="email" placeholder="Enter your work email" aria-label="Work email" required>
+        <button class="btn btn--primary btn--md" type="submit">Subscribe
+            <svg class="btn__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.875 5H15V13.125" stroke="#0B0B15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <svg class="btn__arrow-hover" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18L18 6" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.25 6H18V15.75" stroke="#232398" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+      </form>
+      <p class="news__msg" aria-live="polite"></p>
+    </div>
+  </div>
+  <hr>
+  <div class="sign">
+    <p>© 2026 Roster, Inc. All rights reserved.</p>
+    <nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookie Settings</a></nav>
+  </div>
+  <div class="footer__brand" aria-hidden="true">
+    <img class="footer__logo" src="assets/logo.svg" alt="">
+    <img class="footer__arrow" src="assets/arrow-navy.svg" alt="">
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="product.js"></script>
+</body>
+</html>

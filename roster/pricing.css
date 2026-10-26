@@ -25,7 +25,7 @@
 .ct__group th{border-bottom:0}
 .ct__y{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:4px;background:var(--content-brand);color:#0B0B15}
 .ct__y svg{width:14px;height:14px}
-.ct__n{display:inline-grid;place-items:center;color:#4A4A66}
+.ct__n{display:inline-grid;place-items:center;color:#9D9DA1}
 .ct__n svg{width:20px;height:20px}
 .ct__t{color:#fff;font-weight:500}
 .compare__note{margin:0;font-family:"Inter",sans-serif;font-size:14px;color:var(--content-secondary)}

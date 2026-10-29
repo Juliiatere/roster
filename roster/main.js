@@ -89,3 +89,51 @@ document.querySelectorAll('.qa__q').forEach(b => b.addEventListener('click', () 
   document.fonts && document.fonts.ready.then(() => place(btns.find(b => b.classList.contains('is-on'))));
 })();
 
+
+// ===== Mobile / tablet menu: burger → circle reveal, built from the desktop nav =====
+(() => {
+  const bar = document.querySelector('.navbar__actions'), nav = document.querySelector('.nav'); if (!bar || !nav) return;
+  const chev = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const arr = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M8.5 7H17v8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const items = []; let k = 0;
+  [...nav.children].forEach(el => {
+    if (el.classList.contains('nav__dd')) {
+      const label = el.querySelector('button span').textContent.trim();
+      const subs = [...el.querySelectorAll('.nav__menu-item')].map(a => `<a href="${a.getAttribute('href')}"${a.getAttribute('aria-current') ? ' aria-current="page"' : ''}><b>${a.querySelector('b').innerHTML}</b><small>${a.querySelector('small').innerHTML}</small></a>`).join('');
+      const cur = el.querySelector('[aria-current="page"]') ? ' is-current' : '';
+      items.push(`<li style="--k:${k++}"><button class="mmenu__link mmenu__acc${cur}" type="button" aria-expanded="${cur ? 'true' : 'false'}">${label}${chev}</button><div class="mmenu__sub"><div>${subs}</div></div></li>`);
+    } else if (el.tagName === 'A') {
+      const cur = el.classList.contains('is-current') ? ' is-current' : '';
+      items.push(`<li style="--k:${k++}"><a class="mmenu__link${cur}" href="${el.getAttribute('href')}">${el.querySelector('span').textContent.trim()}${arr}</a></li>`);
+    }
+  });
+  const login = bar.querySelector('.navbar__login'), trial = bar.querySelector('.btn');
+  const menu = document.createElement('div');
+  menu.className = 'mmenu'; menu.id = 'mmenu'; menu.setAttribute('aria-label', 'Menu'); menu.setAttribute('role', 'dialog'); menu.setAttribute('aria-modal', 'true');
+  menu.innerHTML = `<ul class="mmenu__list">${items.join('')}</ul>
+    <div class="mmenu__cta">
+      <a class="btn btn--secondary btn--md" style="--k:${k}" href="${login ? login.getAttribute('href') : 'auth.html?mode=login'}">Log in</a>
+      <a class="btn btn--primary btn--md" style="--k:${k + 1}" href="${trial ? trial.getAttribute('href') : 'auth.html'}">Start Free Trial</a>
+      <a class="mmenu__demo" style="--k:${k + 2}" href="demo.html">or book a 30-min demo ↗</a>
+    </div>`;
+  document.body.appendChild(menu);
+  const btn = document.createElement('button');
+  btn.className = 'burger'; btn.type = 'button'; btn.setAttribute('aria-label', 'Open menu'); btn.setAttribute('aria-controls', 'mmenu'); btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<span></span><span></span><span></span>';
+  bar.appendChild(btn);
+  const root = document.documentElement;
+  const set = open => {
+    if (open) { const r = btn.getBoundingClientRect(); menu.style.setProperty('--mx', (r.left + r.width / 2) + 'px'); menu.style.setProperty('--my', (r.top + r.height / 2) + 'px'); }
+    root.classList.toggle('menu-open', open); document.body.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) setTimeout(() => menu.querySelector('.mmenu__link').focus({ preventScroll: true }), 350);
+  };
+  btn.addEventListener('click', () => set(!root.classList.contains('menu-open')));
+  menu.addEventListener('click', e => {
+    const acc = e.target.closest('.mmenu__acc');
+    if (acc) { acc.setAttribute('aria-expanded', acc.getAttribute('aria-expanded') !== 'true'); return; }
+    if (e.target.closest('a')) set(false);
+  });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && root.classList.contains('menu-open')) { set(false); btn.focus(); } });
+  addEventListener('resize', () => { if (innerWidth > 1100 && root.classList.contains('menu-open')) set(false); });
+})();

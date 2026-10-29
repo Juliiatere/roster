@@ -190,3 +190,39 @@
   addEventListener('resize', update);
   update();
 })();
+
+// ===== Product hero: inline the dashboard SVG and play it (chart draws, numbers count up) =====
+(() => {
+  const wrap = document.getElementById('dashWrap'); if (!wrap || !window.fetch) return;
+  const img = wrap.querySelector('img');
+  fetch(img.getAttribute('src')).then(r => r.ok ? r.text() : Promise.reject()).then(txt => {
+    const box = document.createElement('div'); box.innerHTML = txt;
+    const svg = box.querySelector('svg'); if (!svg) return;
+    svg.setAttribute('aria-label', img.alt);
+    const line = svg.querySelector('.d-line'), rect = svg.querySelector('#dAreaRect'), nums = [...svg.querySelectorAll('.d-num')];
+    const full = rect ? +rect.getAttribute('width') : 0;
+    if (!reduce) {
+      svg.classList.add('is-pre');
+      if (line) svg.style.setProperty('--len', Math.ceil(line.getTotalLength ? 0 : 0) || 900);
+      if (rect) rect.setAttribute('width', 0);
+      nums.forEach(n => n.textContent = '0' + (n.dataset.suf || ''));
+    }
+    img.replaceWith(svg);
+    if (reduce) return;
+    if (line && line.getTotalLength) { const L = Math.ceil(line.getTotalLength()); svg.style.setProperty('--len', L); }
+    const play = () => {
+      const t0 = performance.now(), dur = 1600, ease = t => 1 - Math.pow(1 - t, 3);
+      requestAnimationFrame(() => svg.classList.remove('is-pre'));   // line draws (CSS)
+      const tick = now => {
+        const t = Math.min((now - t0) / dur, 1), e = ease(t);
+        if (rect) rect.setAttribute('width', (full * e).toFixed(1));
+        nums.forEach((n, i) => { const k = Math.min(Math.max((now - t0 - i * 90) / 1200, 0), 1);
+          n.textContent = Math.round(+n.dataset.to * ease(k)) + (n.dataset.suf || ''); });
+        if (t < 1 || nums.some(n => n.textContent !== n.dataset.to + (n.dataset.suf || ''))) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    // start once the window has slid in
+    setTimeout(play, 900);
+  }).catch(() => {});
+})();

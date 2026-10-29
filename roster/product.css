@@ -284,3 +284,12 @@
 
 .pshow__screen-img{display:block;width:100%;height:auto;border-radius:2px 2px 0 0}
 @media (max-width:760px){.pshow__window{padding:5px 5px 0;gap:6px;border-radius:10px 10px 0 0}.pshow .window__url{width:140px;font-size:9px}}
+
+/* animated dashboard (assets/dashboard.svg, inlined by product.js) */
+.pshow__screen-wrap{position:relative;border-radius:2px 2px 0 0;overflow:hidden;line-height:0}
+.pshow__screen-wrap .dash-svg{display:block;width:100%;height:auto}
+.dash-svg .d-num{font-family:"Geist",sans-serif;font-weight:500;fill:#F0F0F4;font-variant-numeric:tabular-nums}
+.dash-svg .d-mark{transition:opacity .5s ease}
+.dash-svg.is-pre .d-mark{opacity:0}
+.dash-svg.is-pre .d-line{stroke-dasharray:var(--len);stroke-dashoffset:var(--len)}
+.dash-svg .d-line{transition:stroke-dashoffset 1.6s cubic-bezier(.22,1,.36,1)}

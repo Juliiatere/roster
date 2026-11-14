@@ -62,6 +62,8 @@
 </header>
 
 <main class="top">
+  <!-- Hero + logos/window + numbers: pinned together while the numbers text fills on scroll -->
+  <div class="intro-pin" id="introPin"><div class="intro-pin__stick" id="introStick">
   <!-- ===== Hero (Figma: Hero 02/Desktop/Light 2062:8093) ===== -->
   <section class="hero">
     <div class="hero__content">
@@ -148,7 +150,6 @@
     </div>
   </section>
   <!-- ===== Trustbadg (Figma 2068:10569) ===== -->
-  <div class="trust-pin" id="trustPin">
   <section class="trust" id="trust">
     <div class="trust__line" aria-hidden="true"></div>
     <div class="trust__row">
@@ -170,7 +171,8 @@
       </div>
     </div>
   </section>
-    <div class="trust-pin__space" aria-hidden="true"></div>
+  </div>
+  <div class="intro-pin__space" id="introSpace" aria-hidden="true"></div>
   </div>
   <!-- ===== Fragmented (Figma 2072:10601) ===== -->
   <section class="frag" data-observe>

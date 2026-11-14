@@ -138,11 +138,15 @@ a{color:inherit;text-decoration:none}
 .glow-y--r{left:70.98%;top:42.76%;width:31.47%;height:31.36%;animation-delay:-2s}
 @keyframes glow-pulse{0%,100%{opacity:.7}50%{opacity:.5}}
 
+/* ===== Intro pin: hero + window + numbers stay on screen together while the text fills ===== */
+.intro-pin{width:100%;position:relative}
+.intro-pin__stick{position:sticky;top:var(--intro-top,0px);width:100%;display:flex;flex-direction:column;align-items:center;gap:32px}
+.intro-pin__space{height:var(--intro-space,60vh)}
 /* ===== Trustbadg (Figma 2068:10569) ===== */
 /* pin track: the section sticks while the text fills, the spacer gives it scroll distance */
 .trust-pin{width:100%;position:relative}
-.trust-pin__space{height:var(--pin-dist,35vh)}
-.trust{position:sticky;top:var(--pin-top,84px);margin:0 auto;width:100%;max-width:calc(var(--container) + var(--gutter)*2);padding:64px var(--gutter) 40px;display:flex;flex-direction:column;gap:32px}
+.trust-pin__space{height:var(--pin-dist,0px)}
+.trust{position:relative;margin:0 auto;width:100%;max-width:calc(var(--container) + var(--gutter)*2);padding:64px var(--gutter) 40px;display:flex;flex-direction:column;gap:32px}
 .trust__line{height:1px;background:#222247;transform-origin:left;transform:scaleX(var(--line,0));transition:transform 1.2s var(--ease-out)}
 .trust__row{display:flex;align-items:flex-start;justify-content:space-between;gap:48px}
 .trust__left{width:670px;flex-shrink:1;align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;gap:27px}
@@ -695,6 +699,8 @@ button.nav__item{border:0;background:none;font-family:inherit;cursor:pointer}
   .stmt{position:relative;top:auto}
   .chart2__series{clip-path:none!important}
   .trust{position:relative;top:auto}
+  .intro-pin__stick{position:relative;top:auto}
+  .intro-pin__space{height:0!important}
   .frag *, .frag .card{transition:none!important;animation:none!important;opacity:1!important;transform:none!important}
   .loved *, .loved .sec-head{transition:none!important;opacity:1!important;transform:none!important}
   .tcard{position:relative;top:auto;margin-top:24px;filter:none!important;transform:none!important}
@@ -788,7 +794,10 @@ button.nav__item{border:0;background:none;font-family:inherit;cursor:pointer}
   .logos__item.is-dup{display:flex}
   .logos .reveal{transition-delay:0s}
   .trust-pin{order:5}
-  .trust-pin__space{height:var(--pin-dist-m,40vh)}
+  .intro-pin{order:1}
+  .intro-pin__stick{gap:40px}
+  .intro-pin .trust{order:5}
+  .trust-pin__space{height:var(--pin-dist-m,0px)}
   .trust{padding:40px 0 40px;gap:32px;max-width:none;overflow:hidden}
   .trust__row{gap:60px}
   .trust__left{width:min(316px,calc(100% - 48px));gap:28px}

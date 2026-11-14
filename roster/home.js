@@ -5,7 +5,9 @@ const floats = [...document.querySelectorAll('.float')];
 let ticking = false;
 function onScroll(){
 if(!reduce){
-  // at scroll 0 the window sits exactly as in Figma; on scroll it drifts slightly (parallax)
+  // at scroll 0 the window sits exactly as in Figma; on scroll it drifts slightly (parallax).
+  // While the intro is pinned the parallax holds still, so nothing in the hero moves.
+  const scrollY = introScroll();
   win.style.setProperty('--win-y', Math.min(scrollY * 0.12, 48).toFixed(1) + 'px');
   winMobile.style.setProperty('--win-y', Math.min(scrollY * 0.05, 12).toFixed(1) + 'px');
   floats.forEach(f => f.style.setProperty('--py', (-Math.min(scrollY, 700) * f.dataset.speed).toFixed(1) + 'px'));
@@ -25,33 +27,35 @@ tText.innerHTML = [...tText.childNodes].map(n => n.nodeType === 3 ? splitWords(n
   : '<em class="hl">' + splitWords(n.textContent, true) + '</em>').join('');
 const chars = [...tText.querySelectorAll('.ch')];
 const hlChars = chars.filter(c => c.classList.contains('ch--hl'));
-let pinTop = 84, pinDist = 1;
-// tweakable: px the pinned section is shifted down from "bottom on the viewport bottom" (0 = flush)
-const PIN_BOTTOM_OFFSET = 0;
-// tweakable: fill starts when the section is this share of the viewport above its pin point,
-// and ends at this share of the pinned distance (.trust-pin__space height)
-const FILL_FROM_VH = .3, FILL_END_OF_PIN = .9;
+// Hero + window + numbers block are pinned together (.intro-pin__stick): they stick when the
+// bottom of the numbers block reaches the bottom of the screen, stay still while the text fills,
+// then the page moves on. Tweakable:
+const PIN_SCROLL = .6;        // pinned scroll distance, share of the viewport height
+const FILL_END_OF_PIN = .9;   // the fill is complete at this share of the pinned distance
+const introPin = document.getElementById('introPin'), introStick = document.getElementById('introStick'), introSpace = document.getElementById('introSpace');
+let pinStart = 0, pinLen = 0;
+function introScroll(){ // scroll position with the pinned stretch taken out
+  return scrollY <= pinStart ? scrollY : scrollY >= pinStart + pinLen ? scrollY - pinLen : pinStart;
+}
 function layoutTrust(){
   // gradient spans the paragraph width: each highlighted glyph shows its own slice
   const pr = tText.getBoundingClientRect();
   tText.style.setProperty('--gw', pr.width.toFixed(1) + 'px');
   hlChars.forEach(c => c.style.setProperty('--gx', (pr.left - c.getBoundingClientRect().left).toFixed(1) + 'px'));
-  // where the section sticks: its bottom edge on the viewport bottom, so the hero stays visible above it;
-  // if it is taller than the space under the navbar, keep the text visible instead
-  const navH = navbar.offsetHeight, h = trust.offsetHeight, vh = document.documentElement.clientHeight;
-  pinTop = Math.max(vh - h + PIN_BOTTOM_OFFSET, navH + 12 - tText.offsetTop);
-  trust.style.setProperty('--pin-top', pinTop.toFixed(1) + 'px');
-  pinDist = trustPin.querySelector('.trust-pin__space').offsetHeight || 1;
+  const vh = document.documentElement.clientHeight;
+  const docTop = introPin.getBoundingClientRect().top + scrollY;
+  const top = Math.min(vh - introStick.offsetHeight, docTop);
+  introStick.style.setProperty('--intro-top', top.toFixed(1) + 'px');
+  pinLen = reduce ? 0 : Math.round(vh * PIN_SCROLL);
+  introSpace.style.setProperty('--intro-space', pinLen + 'px');
+  pinStart = docTop - top;
 }
 const SOFT = 8; // how many characters the fill edge is spread over
 function fillText(){
   let prog;
   if (reduce) prog = 1;
   else {
-    // starts filling as the block scrolls in, finishes near the end of the (short) pinned distance, then the page moves on
-    const top = trustPin.getBoundingClientRect().top;
-    const from = pinTop + document.documentElement.clientHeight * FILL_FROM_VH, to = pinTop - pinDist * FILL_END_OF_PIN;
-    prog = Math.min(Math.max((from - top) / (from - to), 0), 1);
+    prog = Math.min(Math.max((scrollY - pinStart) / (pinLen * FILL_END_OF_PIN), 0), 1);
   }
   const lit = prog * (chars.length + SOFT);
   chars.forEach((c, i) => c.style.setProperty('--p', Math.min(Math.max((lit - i) / SOFT, 0), 1).toFixed(3)));
@@ -59,6 +63,7 @@ function fillText(){
 layoutTrust();
 addEventListener('resize', () => { layoutTrust(); fillText(); });
 document.fonts && document.fonts.ready.then(() => { layoutTrust(); fillText(); });
+addEventListener('load', () => { layoutTrust(); onScroll(); });
 // ===== Trustbadg: reveal + count-up =====
 const io = new IntersectionObserver(es => es.forEach(e => {
   if(!e.isIntersecting) return;

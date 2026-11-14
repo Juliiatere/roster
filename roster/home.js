@@ -26,14 +26,20 @@ tText.innerHTML = [...tText.childNodes].map(n => n.nodeType === 3 ? splitWords(n
 const chars = [...tText.querySelectorAll('.ch')];
 const hlChars = chars.filter(c => c.classList.contains('ch--hl'));
 let pinTop = 84, pinDist = 1;
+// tweakable: px the pinned section is shifted down from "bottom on the viewport bottom" (0 = flush)
+const PIN_BOTTOM_OFFSET = 0;
+// tweakable: fill starts when the section is this share of the viewport above its pin point,
+// and ends at this share of the pinned distance (.trust-pin__space height)
+const FILL_FROM_VH = .3, FILL_END_OF_PIN = .9;
 function layoutTrust(){
   // gradient spans the paragraph width: each highlighted glyph shows its own slice
   const pr = tText.getBoundingClientRect();
   tText.style.setProperty('--gw', pr.width.toFixed(1) + 'px');
   hlChars.forEach(c => c.style.setProperty('--gx', (pr.left - c.getBoundingClientRect().left).toFixed(1) + 'px'));
-  // where the section sticks: centred under the navbar if it fits, otherwise keep the text visible
-  const navH = navbar.offsetHeight, h = trust.offsetHeight, vh = innerHeight;
-  pinTop = h <= vh - navH ? navH + (vh - navH - h) / 2 : Math.max(vh - h, navH + 12 - tText.offsetTop);
+  // where the section sticks: its bottom edge on the viewport bottom, so the hero stays visible above it;
+  // if it is taller than the space under the navbar, keep the text visible instead
+  const navH = navbar.offsetHeight, h = trust.offsetHeight, vh = document.documentElement.clientHeight;
+  pinTop = Math.max(vh - h + PIN_BOTTOM_OFFSET, navH + 12 - tText.offsetTop);
   trust.style.setProperty('--pin-top', pinTop.toFixed(1) + 'px');
   pinDist = trustPin.querySelector('.trust-pin__space').offsetHeight || 1;
 }
@@ -42,9 +48,9 @@ function fillText(){
   let prog;
   if (reduce) prog = 1;
   else {
-    // starts filling as the block scrolls in, finishes at ~85% of the pinned distance, then the page moves on
+    // starts filling as the block scrolls in, finishes near the end of the (short) pinned distance, then the page moves on
     const top = trustPin.getBoundingClientRect().top;
-    const from = pinTop + innerHeight * .35, to = pinTop - pinDist * .85;
+    const from = pinTop + document.documentElement.clientHeight * FILL_FROM_VH, to = pinTop - pinDist * FILL_END_OF_PIN;
     prog = Math.min(Math.max((from - top) / (from - to), 0), 1);
   }
   const lit = prog * (chars.length + SOFT);
